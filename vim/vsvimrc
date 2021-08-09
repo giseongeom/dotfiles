@@ -1,0 +1,5 @@
+﻿
+set nu
+set nowrap
+set autoindent
+set tabstop=8

@@ -1,0 +1,7 @@
+# create ~/.gitignore
+
+# Intellij-based IDEs
+.idea
+
+# VSCode
+.vscode

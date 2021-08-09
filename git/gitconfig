@@ -1,0 +1,34 @@
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
+#
+#
+# git config --global core.autocrlf false
+#
+
+[core]
+    autocrlf = false
+	excludesfile =
+
+[credential]
+	helper = manager
+
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+
+[user]
+	name = GiSeong Eom
+	email = giseong.eom@krafton.com
+
+#[includeIf "gitdir:C:/Users/giseong.eom/Documents/GitHub/work/"]
+#    path = .gitconfig-work
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
