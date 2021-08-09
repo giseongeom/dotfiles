@@ -1,0 +1,40 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.aws: aws
+    ~/.azure: azure
+    ~/.gcp: gcp
+    ~/.kube: k8s/kube
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.ssh:
+        force: true
+        relink: true
+        path: ssh/openssh
+    ~/.terraform.d: terraform.d
+    ~/.vim: vim/vimfiles
+    ~/.vimrc: vim/vimrc
+    ~/.wakatime.cfg: wakatime/wakatime.cfg
+    ~/.zshrc:
+        force: true
+        relink: true
+        if: '[ `uname` = Linux ]'
+        path: zsh/zshrc_linux.zsh
+    ~/.zlogout:
+        force: true
+        relink: true
+        if: '[ `uname` = Linux ]'
+        path: zsh/zlogout_wsl.zsh
+
+- create:
+    - ~/.local
+    - ~/.ansible
+
+- shell:
+    - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
+    - [ chmod 600 ~/.ssh/id* ]

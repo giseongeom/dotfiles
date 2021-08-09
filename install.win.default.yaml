@@ -1,0 +1,38 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc:
+        force: true
+        path: bash/git_bash/bashrc.sh
+    ~/.bash_profile:
+        force: true
+        path: bash/git_bash/bash_profile.sh
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.idlerc: python/idlerc
+    ~/.irbrc: ruby/irbrc
+    ~/.minttyrc: mintty/minttyrc
+    ~/.npmrc: node/npmrc
+    ~/vimfiles: vim/vimfiles
+    ~/_gvimrc: vim/gvimrc
+    ~/_vimrc: vim/vimrc_win
+    ~/_vsvimrc: vim/vsvimrc
+    ~/.wslconfig:
+        force: true
+        path: wsl/wslconfig
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc_win_git_bash.zsh
+    ~/AppData/Roaming/lsd/config.yaml:
+        force: true
+        path: lsd/windows_config.yaml
+
+- create:
+    - ~/.local
+
+- shell:
