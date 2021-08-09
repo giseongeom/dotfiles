@@ -6,14 +6,6 @@
 - clean: ['~']
 
 - link:
-    ~/.aws: aws
-    ~/.azure: azure
-    ~/.gcp: gcp
-    ~/.ssh:
-        force: true
-        relink: true
-        path: ssh/devcontainer
-    ~/.terraform.d/credentials.tfrc.json : terraform.d/credentials.tfrc.json
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
 
@@ -22,6 +14,3 @@
     - ~/.ansible
 
 - shell:
-    - [ test -d ~/.terraform.d || mkdir ~/.terraform.d   ]
-    - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
-    - [ chmod 600 ~/.ssh/id* ]

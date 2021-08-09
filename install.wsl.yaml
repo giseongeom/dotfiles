@@ -6,20 +6,10 @@
 - clean: ['~']
 
 - link:
-    ~/.aws: aws
-    ~/.azure: azure
-    ~/.gcp: gcp
-    ~/.kube: k8s/kube
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
-    ~/.ssh:
-        force: true
-        relink: true
-        path: ssh/openssh
-    ~/.terraform.d: terraform.d
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
-    ~/.wakatime.cfg: wakatime/wakatime.cfg
     ~/.zshrc:
         force: true
         relink: true
@@ -36,5 +26,3 @@
     - ~/.ansible
 
 - shell:
-    - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
-    - [ chmod 600 ~/.ssh/id* ]
