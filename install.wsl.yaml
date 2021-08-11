@@ -6,23 +6,22 @@
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: git/gitconfig
+    ~/.gitconfig:
+        force: true
+        if: '[ `uname` = Linux ]'
+        path: git/linux_gitconfig
     ~/.gitignore: git/gitignore
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.zshrc:
         force: true
-        relink: true
         if: '[ `uname` = Linux ]'
         path: zsh/zshrc_linux.zsh
     ~/.zlogout:
         force: true
-        relink: true
         if: '[ `uname` = Linux ]'
         path: zsh/zlogout_wsl.zsh
 
 - create:
     - ~/.local
     - ~/.ansible
-
-- shell:

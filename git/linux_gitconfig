@@ -1,0 +1,19 @@
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
+#
+#
+# git config --global core.autocrlf false
+#
+
+[core]
+        autocrlf = false
+	excludesfile =
+
+[user]
+	name = GiSeong Eom
+	email = giseong.eom@krafton.com
+
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
