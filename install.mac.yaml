@@ -6,6 +6,14 @@
 - clean: ['~']
 
 - link:
+    ~/.gitconfig:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: git/mac_gitconfig
+    ~/.gitignore:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: git/gitignore
     ~/.gvimrc: vim/gvimrc
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
