@@ -11,6 +11,10 @@
         if: '[ `uname` = Linux ]'
         path: git/linux_gitconfig
     ~/.gitignore: git/gitignore
+    ~/.config/lsd/config.yaml:
+        force: true
+        if: '[ `uname` = Linux ]'
+        path: lsd/linux_config.yaml
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.zshrc:
