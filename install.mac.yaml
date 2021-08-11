@@ -14,9 +14,12 @@
         relink: true
         if: '[ `uname` = Darwin ]'
         path: zsh/zshrc_darwin.zsh
+    ~/.config/lsd/config.yaml:
+        force: true
+        relink: true
+        if: '[ `uname` = Darwin ]'
+        path: lsd/mac_config.yaml
 
 - create:
     - ~/.local
     - ~/.ansible
-
-- shell:
