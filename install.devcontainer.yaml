@@ -8,8 +8,14 @@
 - link:
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
+    ~/.ssh/config:
+        force: true
+        path: ssh/openssh/config
 
 - create:
     - ~/.local
     - ~/.ansible
+
+- shell:
+    - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
 
