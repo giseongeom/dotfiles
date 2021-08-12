@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/giseongeom/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,14 +73,8 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    brew
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    colored-man-pages
-    #vi-mode
-)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,12 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+# .zsh_history
+export HISTFILE=/commandhistory/.zsh_history
 
-
-# .bash_shared_profile
 # the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
 umask 022
+
+# dotfile and so on
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
