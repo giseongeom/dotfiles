@@ -11,9 +11,9 @@
     ~/.ssh/config:
         force: true
         path: ssh/openssh/config
-   #~/.zshrc:
-   #    force: true
-   #    path: zsh/zshrc_devcontainer.zsh
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc_devcontainer.zsh
 
 - create:
     - ~/.local
