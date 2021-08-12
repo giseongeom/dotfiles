@@ -11,6 +11,9 @@
     ~/.ssh/config:
         force: true
         path: ssh/openssh/config
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc_devcontainer.zsh
 
 - create:
     - ~/.local
@@ -18,4 +21,3 @@
 
 - shell:
     - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
-
