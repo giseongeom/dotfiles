@@ -107,6 +107,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+# dotfile and so on
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
+
 # $HOME/.cargo/bin
 if [[ -d "$HOME/.cargo/bin" ]]; then
     export PATH="$HOME/.cargo/bin:$PATH"
@@ -120,14 +125,4 @@ fi
 # $HOME/.local/bin
 if [[ -d "$HOME/.local/bin" ]]; then
     export PATH="$HOME/.local/bin:$PATH"
-fi
-
-# $HOME/Library/Python/3.8/bin
-if [[ -d "$HOME/Library/Python/3.8/bin" ]]; then
-    export PATH="$HOME/Library/Python/3.8/bin:$PATH"
-fi
-
-# $HOME/Library/Python/3.9/bin
-if [[ -d "$HOME/Library/Python/3.9/bin" ]]; then
-    export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 fi
