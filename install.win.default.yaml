@@ -29,10 +29,9 @@
         force: true
         path: zsh/zshrc_win_git_bash.zsh
     ~/AppData/Roaming/lsd/config.yaml:
+        create: true
         force: true
         path: lsd/windows_config.yaml
 
 - create:
     - ~/.local
-
-- shell:
