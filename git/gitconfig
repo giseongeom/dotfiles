@@ -22,7 +22,7 @@
 
 [user]
 	name = GiSeong Eom
-	email = giseong.eom@krafton.com
+	email = jurist@kldp.org
 
 #[includeIf "gitdir:C:/Users/giseong.eom/Documents/GitHub/work/"]
 #    path = .gitconfig-work
