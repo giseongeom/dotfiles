@@ -7,13 +7,12 @@
 #
 
 [core]
-        autocrlf = false
+	autocrlf = false
 	excludesfile =
 
 [user]
 	name = GiSeong Eom
-	email = giseong.eom@krafton.com
+	email = jurist@kldp.org
 
 [credential "https://github.com"]
-	helper = 
-	helper = !gh auth git-credential
+	helper = store

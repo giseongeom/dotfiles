@@ -24,8 +24,6 @@
 	name = GiSeong Eom
 	email = jurist@kldp.org
 
-#[includeIf "gitdir:C:/Users/giseong.eom/Documents/GitHub/work/"]
-#    path = .gitconfig-work
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
