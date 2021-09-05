@@ -140,10 +140,14 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
     eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
-
 # ssh-agent
-if [ -z "$SSH_AUTH_SOCK" ] ; then
+if [ -z "$SSH_AUTH_SOCK" ]; then
     eval `ssh-agent -s`  >/dev/null 2>&1
     ssh-add >/dev/null 2>&1
-    ssh-add ~/.ssh/id_rsa_tech_support_BLUEHOLE.pem >/dev/null 2>&1
+    ssh-add ~/.ssh/id*.pem >/dev/null 2>&1
+fi
+
+# dotfile and so on
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
 fi
