@@ -22,8 +22,7 @@
 
 [user]
 	name = GiSeong Eom
-	email = jurist@kldp.org
-
+	email = giseong.eom@krafton.com
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

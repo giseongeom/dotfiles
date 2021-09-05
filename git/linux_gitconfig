@@ -12,7 +12,7 @@
 
 [user]
 	name = GiSeong Eom
-	email = jurist@kldp.org
+	email = giseong.eom@krafton.com
 
 [credential "https://github.com"]
 	helper = store
