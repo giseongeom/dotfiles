@@ -11,7 +11,7 @@
 	excludesfile =
 
 [credential "https://github.com"]
-	helper = store
+	helper = manager
 
 [difftool "sourcetree"]
 	cmd = '' \"$LOCAL\" \"$REMOTE\"
