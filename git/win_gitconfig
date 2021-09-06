@@ -10,8 +10,8 @@
     autocrlf = false
 	excludesfile =
 
-[credential]
-	helper = manager
+[credential "https://github.com"]
+	helper = store
 
 [difftool "sourcetree"]
 	cmd = '' \"$LOCAL\" \"$REMOTE\"

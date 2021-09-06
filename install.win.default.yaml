@@ -12,7 +12,8 @@
     ~/.bash_profile:
         force: true
         path: bash/git_bash/bash_profile.sh
-    ~/.gitconfig: git/gitconfig
+    ~/.gitconfig:
+        path: git/win_gitconfig
     ~/.gitignore: git/gitignore
     ~/.idlerc: python/idlerc
     ~/.irbrc: ruby/irbrc
