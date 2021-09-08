@@ -1,10 +1,14 @@
+# Work
 # git config --local user.name "GiSeong Eom"
 # git config --local user.email giseong.eom@krafton.com
+#
+# Personal
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email jurist@kldp.org
+#
 # git config --local core.autocrlf false
-#
-#
 # git config --global core.autocrlf false
-#
+
 
 [core]
     autocrlf = false
