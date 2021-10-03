@@ -5,6 +5,10 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.local
+    - ~/.ansible
+
 - link:
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
@@ -14,10 +18,6 @@
     ~/.zshrc:
         force: true
         path: zsh/zshrc_devcontainer.zsh
-
-- create:
-    - ~/.local
-    - ~/.ansible
 
 - shell:
     - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]

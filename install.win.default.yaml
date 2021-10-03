@@ -5,6 +5,10 @@
 
 - clean: ['~']
 
+- create:
+    - ~/AppData/Roaming/lsd
+    - ~/.local
+
 - link:
     ~/.bashrc:
         force: true
@@ -34,5 +38,3 @@
         force: true
         path: lsd/windows_config.yaml
 
-- create:
-    - ~/.local

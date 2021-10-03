@@ -5,6 +5,11 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.local
+    - ~/.ansible
+    - ~/.config/lsd
+
 - link:
     ~/.gitconfig:
         force: true
@@ -25,7 +30,3 @@
         force: true
         if: '[ `uname` = Linux ]'
         path: zsh/zlogout_wsl.zsh
-
-- create:
-    - ~/.local
-    - ~/.ansible

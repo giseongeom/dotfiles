@@ -12,20 +12,14 @@
 
 [core]
     autocrlf = false
-	excludesfile =
+    excludesfile =
 
 [credential "https://github.com"]
-	helper = manager
-
-[difftool "sourcetree"]
-	cmd = '' \"$LOCAL\" \"$REMOTE\"
-
-[mergetool "sourcetree"]
-	cmd = "'' "
-	trustExitCode = true
+	# https://stackoverflow.com/questions/46629838/unable-to-change-git-account/46679813#46679813
+    helper = manager
 
 [user]
-	name = GiSeong Eom
+	name  = GiSeong Eom
 	email = giseong.eom@krafton.com
 
 [filter "lfs"]

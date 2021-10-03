@@ -5,6 +5,11 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.local
+    - ~/.ansible
+    - ~/.config/lsd
+
 - link:
     ~/.gitconfig:
         force: true
@@ -28,6 +33,3 @@
         if: '[ `uname` = Darwin ]'
         path: lsd/mac_config.yaml
 
-- create:
-    - ~/.local
-    - ~/.ansible
