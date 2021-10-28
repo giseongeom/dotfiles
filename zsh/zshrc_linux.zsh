@@ -117,17 +117,18 @@ source $ZSH/oh-my-zsh.sh
 # for ssh logins, install and configure the libpam-umask package.
 umask 022
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
 
 # set PATH so it includes user's private bin directories
 PATH="$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
-# $HOME/.local/bin
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+# linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
+# dotfile and so on
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
 fi
 
 # npm
@@ -135,9 +136,14 @@ if [ -d "$HOME/.npm-global/bin" ] ; then
     PATH="$HOME/.npm-global/bin:$PATH"
 fi
 
-# linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# $HOME/.local/bin
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# $HOME/bin
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
 fi
 
 # ssh-agent
@@ -147,7 +153,3 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     ssh-add ~/.ssh/id*.pem >/dev/null 2>&1
 fi
 
-# dotfile and so on
-if [ -f ~/.zshrc_local.zsh ]; then
-    source ~/.zshrc_local.zsh
-fi

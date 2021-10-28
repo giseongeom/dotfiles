@@ -107,15 +107,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+# dotfile and so on
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
+fi
 
 # $HOME/.cargo/bin
 if [[ -d "$HOME/.cargo/bin" ]]; then
     export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# $HOME/bin
-if [[ -d "$HOME/bin" ]]; then
-    export PATH="$HOME/bin:$PATH"
 fi
 
 # $HOME/.local/bin
@@ -123,7 +122,7 @@ if [[ -d "$HOME/.local/bin" ]]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
-# dotfile and so on
-if [ -f ~/.zshrc_local.zsh ]; then
-    source ~/.zshrc_local.zsh
+# $HOME/bin
+if [[ -d "$HOME/bin" ]]; then
+    export PATH="$HOME/bin:$PATH"
 fi

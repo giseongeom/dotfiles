@@ -112,19 +112,14 @@ export HISTFILE=/commandhistory/.zsh_history
 # the default umask is set in /etc/profile; for setting the umask
 umask 022
 
+# linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
 # dotfile and so on
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# $HOME/.local/bin
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
 fi
 
 # npm
@@ -132,7 +127,12 @@ if [ -d "$HOME/.npm-global/bin" ] ; then
     PATH="$HOME/.npm-global/bin:$PATH"
 fi
 
-# linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# $HOME/.local/bin
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# $HOME/bin
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
 fi
