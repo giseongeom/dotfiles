@@ -9,6 +9,7 @@
     - ~/.local
     - ~/.ansible
     - ~/.config/lsd
+    - ~/.config/karabiner
 
 - link:
     ~/.gitconfig:
@@ -32,4 +33,8 @@
         relink: true
         if: '[ `uname` = Darwin ]'
         path: lsd/mac_config.yaml
-
+    ~/.config/karabiner/karabiner.json:
+        force: true
+        relink: true
+        if: '[ `uname` = Darwin ]'
+        path: karabiner/karabiner.json
