@@ -20,3 +20,6 @@
 
 [credential "https://github.com"]
 	helper = store
+
+[init]
+	defaultBranch = main
