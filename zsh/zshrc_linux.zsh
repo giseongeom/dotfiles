@@ -78,6 +78,7 @@ plugins=(
     brew
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-completions
     colored-man-pages
     #vi-mode
 )
@@ -110,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias pbcopy="clip.exe"
 
 
 # .bash_shared_profile
@@ -119,7 +121,7 @@ umask 022
 
 
 # set PATH so it includes user's private bin directories
-PATH="$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
+PATH="$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Windows:/mnt/c/Windows/System32:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
 # linuxbrew
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
