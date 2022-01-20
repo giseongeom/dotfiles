@@ -5,7 +5,7 @@
 #
 # Personal
 # git config --local user.name "GiSeong Eom"
-# git config --local user.email jurist@kldp.org
+# git config --local user.email perfmon99@gmail.com
 # git config --local core.autocrlf false
 #
 #[credential "https://github.com"]
@@ -26,5 +26,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [init]
 	defaultBranch = main
