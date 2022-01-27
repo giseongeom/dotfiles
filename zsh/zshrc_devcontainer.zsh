@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_UPDATE=true
 DISABLE_UPDATE_PROMPT=true
 # .zsh_history
-export HISTFILE=/commandhistory/.zsh_history
+export HISTFILE=/cmdhistory/.zsh_history
 
 # the default umask is set in /etc/profile; for setting the umask
 umask 022
