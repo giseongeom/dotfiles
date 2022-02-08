@@ -20,6 +20,10 @@
         if: '[ `uname` = Darwin ]'
         path: git/gitignore
     ~/.gvimrc: vim/gvimrc
+    ~/.idlerc:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: python/idlerc/darwin
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.zshrc:
