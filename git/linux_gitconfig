@@ -13,6 +13,7 @@
 [core]
 	autocrlf = false
 	excludesfile =
+	pager = less -FX
 
 [user]
 	name = GiSeong Eom
