@@ -121,18 +121,3 @@ fi
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
-
-# npm
-if [ -d "$HOME/.npm-global/bin" ] ; then
-    PATH="$HOME/.npm-global/bin:$PATH"
-fi
-
-# $HOME/.local/bin
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# $HOME/bin
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
