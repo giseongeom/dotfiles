@@ -1,14 +1,12 @@
 # Work
 # git config --local user.name "GiSeong Eom"
 # git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
 #
 # Personal
 # git config --local user.name "GiSeong Eom"
-# git config --local user.email jurist@perfmon.io
-#
+# git config --local user.email giseong.eom@perfmon.io
 # git config --local core.autocrlf false
-# git config --global core.autocrlf false
-
 
 [user]
 	name = GiSeong Eom
@@ -16,6 +14,7 @@
 
 [core]
 	excludesfile = /Users/giseong.eom/.gitignore_global
+	autocrlf = false
 
 [commit]
 	template = /Users/giseong.eom/.stCommitMsg

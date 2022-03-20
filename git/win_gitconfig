@@ -1,12 +1,13 @@
 # Work
 # git config --local user.name "GiSeong Eom"
 # git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
 #
 # Personal
 # git config --local user.name "GiSeong Eom"
-# git config --local user.email jurist@perfmon.io
-#
+# git config --local user.email giseong.eom@perfmon.io
 # git config --local core.autocrlf false
+#
 #
 #[credential "https://github.com"]
 #	# https://stackoverflow.com/questions/46629838/unable-to-change-git-account/46679813#46679813
