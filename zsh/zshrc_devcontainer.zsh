@@ -117,7 +117,9 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
     eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
-# dotfile and so on
-if [ -f ~/.zshrc_local ]; then
-    source ~/.zshrc_local
+# kube-ps1
+if [ -f /home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh ]; then
+    source "/home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh"
+    PS1='$(kube_ps1)'$PS1
+    kubeoff
 fi
