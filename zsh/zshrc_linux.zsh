@@ -76,10 +76,11 @@ ZSH_THEME="agnoster"
 plugins=(
     git
     brew
-    zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
+    zsh-syntax-highlighting
     colored-man-pages
+    kube-ps1
     #vi-mode
 )
 
@@ -153,5 +154,11 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     eval `ssh-agent -s`  >/dev/null 2>&1
     ssh-add >/dev/null 2>&1
     ssh-add ~/.ssh/id*.pem >/dev/null 2>&1
+fi
+
+# kube-ps1
+if [[ $plugins == *kube-ps1* ]]; then
+   PROMPT=$PROMPT'$(kube_ps1) '
+   kubeoff
 fi
 

@@ -73,7 +73,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git
+    brew
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+    colored-man-pages
+    kube-ps1
+    #vi-mode
+)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -118,8 +127,8 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
 fi
 
 # kube-ps1
-if [ -f /home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh ]; then
-    source "/home/linuxbrew/.linuxbrew/opt/kube-ps1/share/kube-ps1.sh"
-    PS1='$(kube_ps1)'$PS1
-    kubeoff
+if [[ $plugins == *kube-ps1* ]]; then
+   PROMPT=$PROMPT'$(kube_ps1) '
+   kubeoff
 fi
+
