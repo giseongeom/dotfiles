@@ -77,7 +77,6 @@ plugins=(
     git
     brew
     zsh-autosuggestions
-    zsh-completions
     zsh-syntax-highlighting
     colored-man-pages
     kube-ps1
