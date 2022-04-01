@@ -74,6 +74,7 @@ plugins=(
     brew
     colored-man-pages
     git
+    kube-ps1
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -126,3 +127,16 @@ fi
 if [[ -d "$HOME/bin" ]]; then
     export PATH="$HOME/bin:$PATH"
 fi
+
+# kube-ps1
+if [[ $plugins == *kube-ps1* ]]; then
+   PROMPT=$PROMPT'$(kube_ps1) '
+   kubeoff
+fi
+
+# google-cloud-sdk
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
