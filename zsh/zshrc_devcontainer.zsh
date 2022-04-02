@@ -144,3 +144,9 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
+# azure-cli autocompletion
+# https://stackoverflow.com/questions/49273395/how-to-enable-command-completion-for-azure-cli-in-zsh
+if [ -f '/etc/bash_completion.d/azure-cli' ]; then
+    source '/etc/bash_completion.d/azure-cli'
+fi
+
