@@ -120,6 +120,11 @@ export HISTFILE=/cmdhistory/.zsh_history
 # the default umask is set in /etc/profile; for setting the umask
 umask 022
 
+# dotfile and so on
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
+fi
+
 # linuxbrew
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
     eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
