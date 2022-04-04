@@ -155,3 +155,15 @@ if [ -f '/etc/bash_completion.d/azure-cli' ]; then
     source '/etc/bash_completion.d/azure-cli'
 fi
 
+# kubectl completion
+type kubectl &> /dev/null
+if [[ $? == 0 ]]; then
+    source <(kubectl completion zsh)
+fi
+
+# minikube completion
+type minikube &> /dev/null
+if [[ $? == 0 ]]; then
+    source <(minikube completion zsh)
+fi
+
