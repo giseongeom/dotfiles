@@ -123,10 +123,6 @@ umask 022
 # set PATH so it includes user's private bin directories
 PATH="$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Windows:/mnt/c/Windows/System32:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
-# linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-fi
 
 # dotfile and so on
 if [ -f ~/.zshrc_local.zsh ]; then
