@@ -1,0 +1,20 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# mimic GCP bash prompt style
+
+case "$TERM" in
+xterm-256color)
+    color_prompt=yes
+    ;;
+esac
+
+
+if [ "$color_prompt" = yes ]; then
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # 2022.04.08
+    PS1='\[\033]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+    PS1='\[\033]0;\u@\h:\w\007\]\[\033[01;31m\]\h\[\033[01;34m\] \w \$\[\033[00m\] '
+
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+

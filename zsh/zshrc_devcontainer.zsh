@@ -125,11 +125,6 @@ if [ -f ~/.zshrc_local.zsh ]; then
     source ~/.zshrc_local.zsh
 fi
 
-# linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-fi
-
 # kube-ps1
 if [[ $plugins == *kube-ps1* ]]; then
    PROMPT=$PROMPT'$(kube_ps1) '
@@ -154,16 +149,3 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 if [ -f '/etc/bash_completion.d/azure-cli' ]; then
     source '/etc/bash_completion.d/azure-cli'
 fi
-
-# kubectl completion
-type kubectl &> /dev/null
-if [[ $? == 0 ]]; then
-    source <(kubectl completion zsh)
-fi
-
-# minikube completion
-type minikube &> /dev/null
-if [[ $? == 0 ]]; then
-    source <(minikube completion zsh)
-fi
-

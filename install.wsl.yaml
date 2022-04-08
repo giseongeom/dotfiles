@@ -26,6 +26,10 @@
         force: true
         if: '[ `uname` = Linux ]'
         path: zsh/zshrc_linux.zsh
+    ~/.zprofile:
+        force: true
+        if: '[ `uname` = Linux ]'
+        path: zsh/zprofile_linux.zsh
     ~/.zlogout:
         force: true
         if: '[ `uname` = Linux ]'
