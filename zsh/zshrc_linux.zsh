@@ -76,6 +76,8 @@ ZSH_THEME="agnoster"
 plugins=(
     git
     brew
+    docker
+    docker-compose
     zsh-autosuggestions
     zsh-syntax-highlighting
     colored-man-pages
