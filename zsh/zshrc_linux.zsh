@@ -144,6 +144,13 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# /usr/local/java/bin
+if [ -d "/usr/local/java/bin" ] ; then
+    PATH="$PATH:/usr/local/java/bin"
+    export JAVA_HOME="/usr/local/java"
+fi
+
+
 # ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval `ssh-agent -s`  >/dev/null 2>&1
