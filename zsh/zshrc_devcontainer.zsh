@@ -132,7 +132,7 @@ if [[ $plugins == *kube-ps1* ]]; then
 fi
 
 # linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+if [[ $PATH != *linuxbrew* ]] && [[ -d "/home/linuxbrew/.linuxbrew/bin" ]]; then
     eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
