@@ -131,6 +131,11 @@ if [[ $plugins == *kube-ps1* ]]; then
    kubeoff
 fi
 
+# linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
 # aws-cli autocompletion
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
 if [ -f '/usr/local/bin/aws_completer' ]; then

@@ -20,8 +20,7 @@
         path: zsh/zshrc_devcontainer.zsh
     ~/.zprofile:
         force: true
-        if: '[ `uname` = Linux ]'
-        path: zsh/zprofile_linux.zsh
+        path: zsh/zprofile_devcontainer.zsh
 
 - shell:
     - [ test -f ~/.ssh/config && chmod 600 ~/.ssh/config ]
