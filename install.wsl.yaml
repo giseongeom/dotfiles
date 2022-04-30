@@ -25,12 +25,15 @@
     ~/.zshrc:
         force: true
         if: '[ `uname` = Linux ]'
-        path: zsh/zshrc_linux.zsh
+        path: zsh/zshrc_wsl.zsh
     ~/.zprofile:
         force: true
         if: '[ `uname` = Linux ]'
-        path: zsh/zprofile_linux.zsh
+        path: zsh/zprofile_wsl.zsh
     ~/.zlogout:
         force: true
         if: '[ `uname` = Linux ]'
         path: zsh/zlogout_wsl.zsh
+
+- shell:
+    - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2.zsh-theme || cp -f zsh/agnoster2.zsh-theme ~/.oh-my-zsh/custom/themes ]
