@@ -79,6 +79,11 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+# agnoster2 theme
+if [ -f "$ZSH/custom/themes/agnoster2.zsh-theme" ] && [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
+    ZSH_THEME="agnoster2"
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
