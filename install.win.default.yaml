@@ -27,9 +27,6 @@
     ~/_gvimrc: vim/gvimrc
     ~/_vimrc: vim/vimrc_win
     ~/_vsvimrc: vim/vsvimrc
-    ~/.wslconfig:
-        force: true
-        path: wsl/wslconfig
     ~/.zshrc:
         force: true
         path: zsh/zshrc_win_git_bash.zsh
@@ -38,3 +35,5 @@
         force: true
         path: lsd/windows_config.yaml
 
+- shell:
+    - [ test -f ~/.wslconfig || cp -f wsl/.wslconfig ~/ ]
