@@ -152,14 +152,6 @@ if [ -d "/usr/local/java/bin" ] ; then
     export JAVA_HOME="/usr/local/java"
 fi
 
-
-# ssh-agent
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    eval `ssh-agent -s`  >/dev/null 2>&1
-    ssh-add >/dev/null 2>&1
-    ssh-add ~/.ssh/id*.pem >/dev/null 2>&1
-fi
-
 # kube-ps1
 if [[ $plugins == *kube-ps1* ]]; then
    PROMPT=$PROMPT'$(kube_ps1) '
