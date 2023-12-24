@@ -1,0 +1,38 @@
+# Work
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
+#
+# Personal
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@perfmon.io
+# git config --local core.autocrlf false
+
+[user]
+	name = GiSeong Eom
+	email = giseong.eom@krafton.com
+
+[core]
+	excludesfile = /Users/giseong.eom/.gitignore_global
+	autocrlf = false
+
+[commit]
+	template = /Users/giseong.eom/.stCommitMsg
+
+[init]
+	defaultBranch = main
+
+[credential]
+	helper = manager
+
+[credential "https://github.com"]
+	username = giseongeom
+
+[credential "https://github.krafton.com"]
+	username = giseongeom
+
+[credential "https://gitlab.com"]
+	username = giseongeom
+
+[credential "https://git.projectbro.com"]
+	username = giseongeom

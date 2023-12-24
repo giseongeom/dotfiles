@@ -1,0 +1,6 @@
+Host *
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  LogLevel FATAL
+  ServerAliveInterval 60
+  ServerAliveCountMax 5

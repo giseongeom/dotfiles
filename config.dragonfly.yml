@@ -1,0 +1,57 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.ansible
+    - ~/.aws
+    - ~/.config/lsd
+    - ~/.config/gh
+    - ~/.config/glab-cli
+    - ~/.kube
+    - ~/.local
+    - ~/.ssh
+    - ~/.terraform.d
+
+- link:
+    ~/.config/glab-cli/aliases.yml:
+        force: true
+        path: glab/aliases.yml
+    ~/.config/glab-cli/config.yml:
+        force: true
+        path: glab/config.yml
+    ~/.config/gh/config.yml:
+        force: true
+        path: gh/config.yml
+    ~/.config/gh/hosts.yml:
+        force: true
+        path: gh/hosts.yml
+    ~/.vim: vim/vimfiles
+    ~/.vimrc: vim/vimrc
+    ~/.zshrc:
+        force: true
+        if: '[ `uname` = DragonFly ]'
+        path: zsh/zshrc_dragonfly.zsh
+    ~/.zprofile:
+        force: true
+        if: '[ `uname` = DragonFly ]'
+        path: zsh/zprofile/dragonfly.zsh
+    ~/.zlogout:
+        force: true
+        if: '[ `uname` = DragonFly ]'
+        path: zsh/zlogout/dragonfly.zsh
+
+- shell:
+    - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
+    - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/dragonfly.zsh ~/.zshrc_local.zsh ]
+    - [ test -f ~/.git-credentials || cp -f git/.git-credentials ~/ ]
+    - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
+    - [ test -f ~/.gitconfig || cp -f git/linux/.gitconfig ~/ ]
+    - [ test -f ~/.wakatime.cfg || cp -f wakatime/.wakatime.cfg ~/ ]
+    - [ test -f ~/.kube/config  || cp -f kube/config ~/.kube/ ]
+    - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+

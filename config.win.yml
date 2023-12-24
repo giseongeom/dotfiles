@@ -1,0 +1,57 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.aws
+    - ~/AppData/Roaming/lsd
+    - ~/AppData/Roaming/github CLI
+    - ~/AppData/Roaming/terraform.d
+    - ~/Documents/oh-my-posh
+    - ~/.kube
+    - ~/.local
+    - ~/.config/fastfetch
+    - ~/.ssh
+
+- link:
+    ~/.config/fastfetch/config.conf:
+        force: true
+        path: fastfetch/windows_config.conf
+    ~/.idlerc: python/idlerc
+    ~/.irbrc: ruby/irbrc
+    ~/.minttyrc: mintty/minttyrc
+    ~/vimfiles: vim/vimfiles
+    ~/_gvimrc: vim/gvimrc
+    ~/_vimrc: vim/vimrc_win
+    ~/_vsvimrc: vim/vsvimrc
+    ~/AppData/Roaming/lsd/config.yaml:
+        create: true
+        force: true
+        path: lsd/windows_config.yaml
+    ~/AppData/Roaming/terraform.d/credentials.tfrc.json:
+        force: true
+        path: terraform.d/credentials.tfrc.json
+    ~/AppData/Roaming/GitHub CLI/config.yml:
+        force: true
+        path: gh/config.yml
+    ~/AppData/Roaming/GitHub CLI/hosts.yml:
+        force: true
+        path: gh/hosts.yml
+
+
+- shell:
+    - [ test -f ~/.aws/config      || cp -f aws/config      ~/.aws/ ]
+    - [ test -f ~/.aws/credentials || cp -f aws/credentials ~/.aws/ ]
+    - [ test -f ~/.wslconfig || cp -f wsl/.wslconfig ~/ ]
+    - [ test -f ~/.gitconfig || cp -f git/win/.gitconfig ~/ ]
+    - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
+    - [ test -f ~/.bashrc    || cp -f bash/win/.bashrc ~/ ]
+    - [ test -f ~/.bash_profile || cp -f bash/win/.bash_profile ~/ ]
+    - [ test -f ~/.wakatime.cfg || cp -f wakatime/.wakatime.cfg ~/ ]
+    - [ test -f ~/.kube/config  || cp -f kube/config ~/.kube/ ]
+    - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]

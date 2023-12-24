@@ -1,0 +1,61 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.1password
+    - ~/.ansible
+    - ~/.aws
+    - ~/.config/lsd
+    - ~/.config/gh
+    - ~/.config/glab-cli
+    - ~/.config/fastfetch
+    - ~/.kube
+    - ~/.local
+    - ~/.ssh
+    - ~/.terraform.d
+
+- link:
+    ~/.config/fastfetch/config.conf:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: fastfetch/mac_config.conf
+    ~/.gvimrc: vim/gvimrc
+    ~/.idlerc:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: python/idlerc/darwin
+    ~/.vim: vim/vimfiles
+    ~/.vimrc: vim/vimrc
+    ~/.zshrc:
+        force: true
+        relink: true
+        if: '[ `uname` = Darwin ]'
+        path: zsh/zshrc_darwin.zsh
+    ~/.zprofile:
+        force: true
+        relink: true
+        if: '[ `uname` = Darwin ]'
+        path: zsh/zprofile/darwin.zsh
+    ~/.config/lsd/config.yaml:
+        force: true
+        relink: true
+        if: '[ `uname` = Darwin ]'
+        path: lsd/mac_config.yaml
+
+- shell:
+    - [ test -f ~/.aws/config      || cp -f aws/config      ~/.aws/ ]
+    - [ test -f ~/.aws/credentials || cp -f aws/credentials ~/.aws/ ]
+    - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
+    - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/darwin.zsh ~/.zshrc_local.zsh ]
+    - [ test -f ~/.gitconfig || cp -f git/mac/.gitconfig ~/ ]
+    - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
+    - [ test -f ~/.wakatime.cfg || cp -f wakatime/.wakatime.cfg ~/ ]
+    - [ test -f ~/.kube/config  || cp -f kube/config ~/.kube/ ]
+    - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]
+
