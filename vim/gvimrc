@@ -1,0 +1,53 @@
+if has('gui_running')
+" English menu
+set langmenu=en_US
+let $LANG = 'en_US'
+
+" Disable Visual-bell
+" https://stackoverflow.com/questions/5933568/disable-blinking-at-the-first-last-line-of-the-file
+set t_vb=
+
+   if has("gui_gtk2")
+      " set guifont=NanumGothicCoding\ 12
+      set guifont=D2Coding:h12:b:cDEFAULT
+
+   elseif has("gui_win32")
+      " map F2 as Ctrl-A (incrase numbers)
+      " Ctrl-X decrease numbers
+      nnoremap <F2> <C-a>
+      nnoremap <F3> <C-x>
+
+      " Windows specific
+      source $VIMRUNTIME/vimrc_example.vim
+      "source $VIMRUNTIME/mswin.vim
+      behave mswin
+      set noundofile
+
+      " English message
+      lang mes en
+      set langmenu=en_US
+      let $LANG = 'en_US'
+      source $VIMRUNTIME/delmenu.vim
+      source $VIMRUNTIME/menu.vim
+
+      " Set font
+      set guifont=D2Coding:h12:b:cDEFAULT
+      "set guifont=NanumGothicCoding:h12:b:cDEFAULT
+      "set guifontwide=NanumGothicCoding:h10:cDEFAULT
+      "set guifont=Bitstream_Vera_Sans_Mono:h10:b:cANSI
+      "set guifontwide=NanumGothicCoding:h10:b:cDEFAULT
+      "set guifontwide=GulimChe:h10:b:cDEFAULT
+
+      syntax on
+      colorscheme solarized8
+
+   elseif has("gui_macvim")
+      "set guifont=D2Coding:h16
+      set guifont=D2Coding_ligature:h16
+
+      syntax on
+      colorscheme solarized8
+   endif
+endif
+
+
