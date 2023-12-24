@@ -32,6 +32,4 @@
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/devcontainer.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.gitconfig || cp -f git/linux/.gitconfig ~/ ]
-    - [ test -f ~/.wakatime.cfg || cp -f wakatime/.wakatime.cfg ~/ ]
-    - [ test -f ~/.kube/config  || cp -f kube/config ~/.kube/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]

@@ -30,18 +30,6 @@
         force: true
         if: '[ `uname` = Linux ]'
         path: fastfetch/wsl_config.conf
-    ~/.config/glab-cli/aliases.yml:
-        force: true
-        path: glab/aliases.yml
-    ~/.config/glab-cli/config.yml:
-        force: true
-        path: glab/config.yml
-    ~/.config/gh/config.yml:
-        force: true
-        path: gh/config.yml
-    ~/.config/gh/hosts.yml:
-        force: true
-        path: gh/hosts.yml
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.zshrc:
@@ -58,13 +46,9 @@
         path: zsh/zlogout/wsl.zsh
 
 - shell:
-    - [ test -f ~/.aws/config      || cp -f aws/config      ~/.aws/ ]
-    - [ test -f ~/.aws/credentials || cp -f aws/credentials ~/.aws/ ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/wsl.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.gitconfig || cp -f git/wsl/.gitconfig ~/ ]
-    - [ test -f ~/.wakatime.cfg || cp -f wakatime/.wakatime.cfg ~/ ]
-    - [ test -f ~/.kube/config  || cp -f kube/config ~/.kube/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
