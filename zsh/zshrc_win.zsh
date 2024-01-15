@@ -104,17 +104,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/c/Users/giseong.eom/.zshrc'
-
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
 alias pbcopy="clip"
 alias k="kubectl"

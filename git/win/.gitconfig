@@ -17,10 +17,11 @@
 [core]
     autocrlf = false
     excludesfile =
+    pager = less -FX
 
 [user]
     name  = GiSeong Eom
-    email = giseong.eom@krafton.com
+    email = giseong.eom@perfmon.io
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
