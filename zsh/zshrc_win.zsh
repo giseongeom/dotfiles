@@ -8,7 +8,8 @@ export ZSH="/c/Users/giseong.eom/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="agnoster2clock"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,3 +102,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/c/Users/giseong.eom/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+alias pbcopy="clip"
+alias k="kubectl"
+
+# fastfetch
+if [[ -x "$(command -v fastfetch)" ]];
+then
+    fastfetch
+fi
