@@ -119,12 +119,6 @@ if [[ $plugins == *kube-ps1* ]]; then
     kubeoff
 fi
 
-# fastfetch
-if [[ -x "$(command -v fastfetch)" ]];
-then
-    fastfetch
-fi
-
 # dotfile and so on
 if [ -f ~/.zshrc_local.zsh ]; then
     source ~/.zshrc_local.zsh
