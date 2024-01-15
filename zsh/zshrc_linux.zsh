@@ -156,8 +156,8 @@ fi
 
 # kube-ps1
 if [[ $plugins == *kube-ps1* ]]; then
-   PROMPT=$PROMPT'$(kube_ps1) '
-   kubeoff
+    PROMPT=$PROMPT'$(kube_ps1) '
+    kubeoff
 fi
 
 # aws-cli autocompletion

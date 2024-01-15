@@ -73,6 +73,7 @@ plugins=(
     git
     zsh-syntax-highlighting
     zsh-autosuggestions
+    kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,8 +119,19 @@ compinit
 alias pbcopy="clip"
 alias k="kubectl"
 
+# kube-ps1
+if [[ $plugins == *kube-ps1* ]]; then
+    PROMPT=$PROMPT'$(kube_ps1) '
+    kubeoff
+fi
+
 # fastfetch
 if [[ -x "$(command -v fastfetch)" ]];
 then
     fastfetch
+fi
+
+# dotfile and so on
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
 fi
