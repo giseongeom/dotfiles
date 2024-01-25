@@ -11,24 +11,44 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 #    fi
 #fi
 
-# 1password ssh-agent
-#if [ -f "$HOME/.agent-bridge.sh" ]; then
-#    source $HOME/.agent-bridge.sh
-#fi
-
 # nodejs
 # Current
 if [ -d "/usr/local/lib/nodejs/current/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/current/bin"; fi
 # LTS
 if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
 
+# fastfetch
+if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]];
+then
+    fastfetch
+fi
+
+# 1password ssh-agent
+if [ -f "$HOME/.agent-bridge.sh" ]; then
+    source $HOME/.agent-bridge.sh
+fi
+
+
 # krew
 if [ -d "$HOME/.krew/bin" ] ; then
   PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 fi
 
-# fastfetch
-if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]];
+
+# When LENS Session
+if [[ -n "$LENS_SESSION" ]];
 then
-    fastfetch
+    cd $HOME
+    if [[ -n "$KUBECONFIG" ]];
+    then
+        chmod 600 $KUBECONFIG
+    fi
 fi
+
+
+# Perforce / $P4CONFIG
+if [[ -f ${HOME}/.config/p4/p4config ]];
+then
+    export P4CONFIG=${HOME}/.config/p4/p4config
+fi
+
