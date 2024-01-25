@@ -1,6 +1,8 @@
 [wsl2]
 swap=0
-memory=16GB
-processors=8
-localhostforwarding=true
+memory=24GB
+processors=10
 vmIdleTimeout=1800000
+
+[experimental]
+networkingMode=mirrored
