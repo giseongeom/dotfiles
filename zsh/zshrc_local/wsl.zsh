@@ -18,7 +18,7 @@ if [ -d "/usr/local/lib/nodejs/current/bin" ]; then PATH="$PATH:/usr/local/lib/n
 if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
 
 # fastfetch
-if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]];
+if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]] && [[ -z "$IDEA_JDK" ]];
 then
     fastfetch
 fi
@@ -45,10 +45,22 @@ then
     fi
 fi
 
-
 # Perforce / $P4CONFIG
-if [[ -f ${HOME}/.config/p4/p4config ]];
+if [[ -f ${HOME}/.p4config ]];
 then
-    export P4CONFIG=${HOME}/.config/p4/p4config
+    export P4CONFIG=${HOME}/.p4config
 fi
+
+# Kotlin
+if [[ -d "/usr/local/lib/kotlin/bin" ]];
+then
+    export KOTLIN_HOME="/usr/local/lib/kotlin"
+    PATH="$PATH:/usr/local/lib/kotlin/bin"
+
+    if [[ -d "/usr/local/lib/kotlin-native/bin" ]];
+    then
+        PATH="$PATH:/usr/local/lib/kotlin-native/bin"
+    fi
+fi
+
 
