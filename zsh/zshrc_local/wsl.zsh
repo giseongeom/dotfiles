@@ -18,7 +18,7 @@ if [ -d "/usr/local/lib/nodejs/current/bin" ]; then PATH="$PATH:/usr/local/lib/n
 if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
 
 # fastfetch
-if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]] && [[ -z "$IDEA_JDK" ]];
+if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]] && [[ -z "$IDEA_JDK" ]] && [[ -z "$TERM_PROGRAM" ]];
 then
     fastfetch
 fi
