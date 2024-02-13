@@ -28,7 +28,7 @@ if [ -d "$HOME/.krew}/bin" ] ; then
 fi
 
 # fastfetch
-if [[ -x "$(command -v fastfetch)" ]];
+if [[ -x "$(command -v fastfetch)" ]] && [[ -z "$GOLAND_JDK" ]];
 then
     fastfetch
 fi

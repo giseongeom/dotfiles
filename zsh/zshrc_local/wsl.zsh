@@ -31,7 +31,7 @@ fi
 
 # krew
 if [ -d "$HOME/.krew/bin" ] ; then
-  PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+    PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 fi
 
 
@@ -62,5 +62,4 @@ then
         PATH="$PATH:/usr/local/lib/kotlin-native/bin"
     fi
 fi
-
 
