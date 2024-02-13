@@ -33,3 +33,10 @@ export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agen
 if [[ -f "$HOME/.cargo/env" ]]; then
     source $HOME/.cargo/env
 fi
+
+# azure-cli on mac
+if [[ -f "$(brew --prefix)/etc/bash_completion.d/az" ]]; then
+    autoload bashcompinit && bashcompinit
+    source $(brew --prefix)/etc/bash_completion.d/az
+fi
+
