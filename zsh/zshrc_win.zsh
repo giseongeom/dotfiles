@@ -107,8 +107,6 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-autoload -Uz compinit
-compinit
 
 alias pbcopy="clip"
 alias k="kubectl"

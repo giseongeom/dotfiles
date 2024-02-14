@@ -1,6 +1,5 @@
 # zshrc_local.zsh
 
-
 # fastfetch
 if [[ -x "$(command -v fastfetch)" ]];
 then
@@ -13,3 +12,11 @@ then
     export P4CONFIG=${HOME}/.config/p4/p4config
 fi
 
+# Enable gsudo cache on inside Git Bash/Zsh
+gsudon() {
+    my_zsh_pid=$(ps -p $$ | awk 'NR==2{print $4;exit}')
+    gsudo cache on -p $my_zsh_pid
+}
+
+# zsh
+autoload -Uz compinit && compinit
