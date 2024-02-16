@@ -35,7 +35,7 @@ if [[ -f "$HOME/.cargo/env" ]]; then
 fi
 
 # azure-cli on mac
-if [[ -f "$(brew --prefix)/etc/bash_completion.d/az" ]]; then
+if [[ -x "$(command -v brew)" ]] && [[ -f "$(brew --prefix)/etc/bash_completion.d/az" ]]; then
     autoload bashcompinit && bashcompinit
     source $(brew --prefix)/etc/bash_completion.d/az
 fi

@@ -3,7 +3,7 @@
 # fastfetch
 if [[ -x "$(command -v fastfetch)" ]];
 then
-    fastfetch --logo chrom
+    fastfetch --logo android
 fi
 
 # Perforce / $P4CONFIG
