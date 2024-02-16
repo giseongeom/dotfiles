@@ -6,15 +6,24 @@
 - clean: ['~']
 
 - create:
-    - ~/.1password
-    - ~/.ansible
-    - ~/.aws
-    - ~/.config/lsd
-    - ~/.config/fastfetch
-    - ~/.kube
-    - ~/.local
-    - ~/.ssh
-    - ~/.terraform.d
+    ~/.1password:
+        mode: 0700
+    ~/.ansible:
+        mode: 0700
+    ~/.aws:
+        mode: 0700
+    ~/.config/lsd:
+        mode: 0700
+    ~/.config/fastfetch:
+        mode: 0700
+    ~/.kube:
+        mode: 0700
+    ~/.local:
+        mode: 0700
+    ~/.ssh:
+        mode: 0700
+    ~/.terraform.d:
+        mode: 0700
 
 - link:
     ~/.config/fastfetch/config.conf:
