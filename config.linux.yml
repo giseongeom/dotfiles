@@ -58,3 +58,4 @@
     - [ test -f ~/.gitconfig       || cp -f git/linux/.gitconfig ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]
