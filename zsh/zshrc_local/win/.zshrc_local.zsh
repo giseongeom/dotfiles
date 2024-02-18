@@ -1,10 +1,11 @@
 # zshrc_local.zsh
 
 # fastfetch
-if [[ -x "$(command -v fastfetch)" ]];
+if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$WSL_DISTRO_NAME" ]] && [[ -z "$LENS_SESSION" ]] && [[ -z "$IDEA_JDK" ]] && [[ -z "$TERM_PROGRAM" ]];
 then
     fastfetch --logo android
 fi
+
 
 # Perforce / $P4CONFIG
 if [[ -f ${HOME}/.p4config ]];
