@@ -16,7 +16,9 @@
     ~/.zshrc:
         force: true
         path: zsh/zshrc_msys2.zsh
-    ~/vimfiles: vim/vimfiles
+    ~/vimfiles:
+        force: true
+        path: vim/vimfiles
 
 - shell:
     - [ test -f ~/.gitconfig   || cp -f git/msys2/.gitconfig ~/ ]
