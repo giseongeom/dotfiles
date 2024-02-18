@@ -104,10 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-
 alias pbcopy="clip"
 alias k="kubectl"
 

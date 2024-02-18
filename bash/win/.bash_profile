@@ -3,6 +3,6 @@ test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 
 # fastfetch
-if [[ -x /c/Users/giseong.eom/scoop/shims/fastfetch ]]; then
-	fastfetch
+if [[ -x /c/Users/giseong.eom/scoop/shims/fastfetch ]] && [[ -z "$TERM_PROGRAM" ]]; then
+	fastfetch -l android
 fi
