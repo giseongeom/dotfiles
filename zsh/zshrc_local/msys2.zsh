@@ -14,10 +14,10 @@ then
 fi
 
 # Enable gsudo cache on inside Git Bash/Zsh
-gsudon() {
-    my_zsh_pid=$(ps -p $$ | awk 'NR==2{print $4;exit}')
-    gsudo cache on -p $my_zsh_pid
-}
+# gsudon() {
+#     my_zsh_pid=$(ps -p $$ | awk 'NR==2{print $4;exit}')
+#     gsudo cache on -p $my_zsh_pid
+# }
 
 # zsh
 autoload -Uz compinit && compinit
