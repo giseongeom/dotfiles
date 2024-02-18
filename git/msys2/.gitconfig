@@ -33,7 +33,7 @@
     defaultBranch = main
 
 [credential]
-    helper = "/c/Program Files/Git/mingw64/bin/git-credential-manager"
+    helper = manager
 
 [http]
     sslCAInfo = c:/Users/giseong.eom/scoop/apps/cacert/current/cacert.pem
