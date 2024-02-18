@@ -1,0 +1,57 @@
+# Work
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@krafton.com
+# git config --local core.autocrlf false
+#
+# Personal
+# git config --local user.name "GiSeong Eom"
+# git config --local user.email giseong.eom@perfmon.io
+# git config --local core.autocrlf false
+#
+#
+#[core]
+#required when 1password ssh-agent is used
+#sshCommand = C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe
+#
+
+[core]
+    autocrlf = false
+    excludesfile =
+    pager = less -FX
+
+[user]
+    name  = GiSeong Eom
+    email = giseong.eom@perfmon.io
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[init]
+    defaultBranch = main
+
+[credential]
+    helper = "/c/Program Files/Git/mingw64/bin/git-credential-manager"
+
+[http]
+    sslCAInfo = c:/Users/giseong.eom/scoop/apps/cacert/current/cacert.pem
+
+[credential "https://github.krafton.com"]
+    username = giseongeom
+
+[credential "https://gitlab.com"]
+    username = giseongeom
+
+[credential "https://git.projectbro.com"]
+    username = giseongeom
+    provider = gitlab
+
+[credential "https://github.com"]
+    username = giseongeom
+
+[oh-my-zsh]
+    hide-status = 1
+    hide-dirty  = 1
+

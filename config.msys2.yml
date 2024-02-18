@@ -19,9 +19,9 @@
     ~/vimfiles: vim/vimfiles
 
 - shell:
-    - [ test -f ~/.gitconfig   || cp -f git/win/.gitconfig ~/ ]
+    - [ test -f ~/.gitconfig   || cp -f git/msys2/.gitconfig ~/ ]
     - [ test -f ~/.gitignore   || cp -f git/.gitignore ~/ ]
-    - [ test -f ~/.ssh/config  || cp -f ssh/win/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config  || cp -f ssh/msys2/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config  && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/msys2.zsh ~/.zshrc_local.zsh ]
