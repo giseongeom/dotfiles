@@ -22,7 +22,7 @@
     ~/.zshrc:
         force: true
         if: '[ `uname` = DragonFly ]'
-        path: zsh/zshrc_dragonfly.zsh
+        path: zsh/rc/dragonfly.zsh
     ~/.zprofile:
         force: true
         if: '[ `uname` = DragonFly ]'
@@ -34,7 +34,6 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/dragonfly.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.gitconfig || cp -f git/linux/.gitconfig ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]

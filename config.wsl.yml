@@ -35,7 +35,7 @@
     ~/.zshrc:
         force: true
         if: '[ `uname` = Linux ]'
-        path: zsh/zshrc_wsl.zsh
+        path: zsh/rc/wsl.zsh
     ~/.zprofile:
         force: true
         if: '[ `uname` = Linux ]'

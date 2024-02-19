@@ -23,7 +23,7 @@
         path: ssh/devcontainer/config
     ~/.zshrc:
         force: true
-        path: zsh/zshrc_devcontainer.zsh
+        path: zsh/rc/devcontainer.zsh
     ~/.zprofile:
         force: true
         path: zsh/zprofile/devcontainer.zsh

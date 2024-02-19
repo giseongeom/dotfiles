@@ -41,7 +41,7 @@
         force: true
         relink: true
         if: '[ `uname` = Darwin ]'
-        path: zsh/zshrc_darwin.zsh
+        path: zsh/rc/darwin.zsh
     ~/.zprofile:
         force: true
         relink: true

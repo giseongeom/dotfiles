@@ -41,7 +41,7 @@
     ~/.zshrc:
         force: true
         if: '[ `uname` = Linux ]'
-        path: zsh/zshrc_linux.zsh
+        path: zsh/rc/linux.zsh
     ~/.zprofile:
         force: true
         if: '[ `uname` = Linux ]'
