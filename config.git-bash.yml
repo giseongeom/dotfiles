@@ -21,7 +21,9 @@
         path: fastfetch/windows_config.conf
     ~/.idlerc: python/idlerc
     ~/.irbrc: ruby/irbrc
-    ~/.minttyrc: mintty/minttyrc
+    ~/.minttyrc:
+        force: true
+        path: mintty/minttyrc
     ~/vimfiles: vim/vimfiles
     ~/_gvimrc: vim/gvimrc
     ~/_vimrc: vim/vimrc_win
@@ -32,11 +34,11 @@
         path: lsd/windows_config.yaml
 
 - shell:
-    - [ test -f ~/.wslconfig || cp -f wsl/.wslconfig ~/ ]
-    - [ test -f ~/.gitconfig || cp -f git/win/.gitconfig ~/ ]
-    - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
-    - [ test -f ~/.bashrc    || cp -f bash/win/.bashrc ~/ ]
-    - [ test -f ~/.bash_profile || cp -f bash/win/.bash_profile ~/ ]
+    - [ test -f ~/.wslconfig    || cp -f wsl/.wslconfig ~/ ]
+    - [ test -f ~/.gitconfig    || cp -f git/win/.gitconfig ~/ ]
+    - [ test -f ~/.gitignore    || cp -f git/.gitignore ~/ ]
+    - [ test -f ~/.bashrc       || cp -f bash/git_bash/.bashrc ~/ ]
+    - [ test -f ~/.bash_profile || cp -f bash/git_bash/.bash_profile ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/win/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]
