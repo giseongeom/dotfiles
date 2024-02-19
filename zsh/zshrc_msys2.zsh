@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # set PATH so it includes user's private bin directories
-PATH="$PATH:/c/Users/giseong.eom/bin:/c/Users/giseong.eom/scoop/shims:/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
+PATH="$PATH:/c/Users/giseong.eom/bin:/c/Users/giseong.eom/scoop/shims:/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin:/c//Program Files/Docker/Docker/resources/bin"
 
 # $HOME/.local/bin
 if [ -d "$HOME/.local/bin" ] ; then
