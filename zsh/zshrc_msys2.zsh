@@ -80,6 +80,38 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# set PATH so it includes user's private bin directories
+PATH="$PATH:/c/Users/giseong.eom/bin:/c/Users/giseong.eom/scoop/shims:/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
+
+# golang
+if [ -d "/usr/local/go/bin" ] ; then
+    PATH="$PATH:/usr/local/go/bin"
+fi
+
+if [ -d "$HOME/go/bin" ] ; then
+    PATH="$HOME/go/bin:$PATH"
+fi
+
+# npm
+if [ -d "$HOME/.npm-global/bin" ] ; then
+    PATH="$HOME/.npm-global/bin:$PATH"
+fi
+
+# $HOME/.local/bin
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# $HOME/bin
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# /usr/local/java/bin
+if [ -d "/usr/local/java/bin" ] ; then
+    PATH="$PATH:/usr/local/java/bin"
+    export JAVA_HOME="/usr/local/java"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

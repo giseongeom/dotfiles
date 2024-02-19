@@ -127,7 +127,6 @@ umask 022
 # set PATH so it includes user's private bin directories
 PATH="$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Windows:/mnt/c/Windows/System32:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
-
 # golang
 if [ -d "/usr/local/go/bin" ] ; then
     PATH="$PATH:/usr/local/go/bin"
@@ -160,8 +159,8 @@ fi
 
 # kube-ps1
 if [[ $plugins == *kube-ps1* ]]; then
-   PROMPT=$PROMPT'$(kube_ps1) '
-   kubeoff
+    PROMPT=$PROMPT'$(kube_ps1) '
+    kubeoff
 fi
 
 # aws-cli autocompletion
