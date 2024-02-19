@@ -14,7 +14,8 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # kubectl autocompletion
-if [[ -x "$(command -v kubectl)" ]]; then source <(kubectl completion zsh); fi
+# It requires AWS_PROFILE to be set
+if [[ -x "$(command -v kubectl)" ]] && [[ -n "$AWS_PROFILE" ]]; then source <(kubectl completion zsh); fi
 
 # helm autocompletion
 if [[ -x "$(command -v helm)" ]]; then source <(helm completion zsh); fi
