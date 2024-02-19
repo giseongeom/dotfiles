@@ -55,7 +55,6 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/darwin.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.gitconfig    || cp -f git/mac/.gitconfig ~/ ]
     - [ test -f ~/.gitignore    || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/mac/config ~/.ssh/ ]
