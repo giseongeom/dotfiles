@@ -15,13 +15,17 @@
     ~/.zshrc:
         force: true
         path: zsh/rc/msys2.zsh
+    ~/.gitconfig:
+        force: true
+        path: git/config/msys2.config
+    ~/.gitignore:
+        force: true
+        path: git/.gitignore
     ~/vimfiles:
         force: true
         path: vim/vimfiles
 
 - shell:
-    - [ test -f ~/.gitconfig   || cp -f git/msys2/.gitconfig ~/ ]
-    - [ test -f ~/.gitignore   || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.ssh/config  || cp -f ssh/msys2/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config  && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]

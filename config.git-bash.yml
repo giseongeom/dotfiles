@@ -16,6 +16,12 @@
     - ~/.ssh
 
 - link:
+    ~/.gitconfig:
+        force: true
+        path: git/config/git-bash.config
+    ~/.gitignore:
+        force: true
+        path: git/.gitignore
     ~/.config/fastfetch/config.conf:
         force: true
         path: fastfetch/windows_config.conf
@@ -35,8 +41,6 @@
 
 - shell:
     - [ test -f ~/.wslconfig    || cp -f wsl/.wslconfig ~/ ]
-    - [ test -f ~/.gitconfig    || cp -f git/win/.gitconfig ~/ ]
-    - [ test -f ~/.gitignore    || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.bashrc       || cp -f bash/git_bash/.bashrc ~/ ]
     - [ test -f ~/.bash_profile || cp -f bash/git_bash/.bash_profile ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/win/config ~/.ssh/ ]

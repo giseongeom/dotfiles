@@ -32,6 +32,14 @@
         path: fastfetch/wsl_config.conf
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
+    ~/.gitconfig:
+        force: true
+        if: '[ `uname` = Linux ]'
+        path: git/config/wsl.config
+    ~/.gitignore:
+        force: true
+        if: '[ `uname` = Linux ]'
+        path: git/.gitignore
     ~/.zshrc:
         force: true
         if: '[ `uname` = Linux ]'
@@ -47,7 +55,5 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
-    - [ test -f ~/.gitconfig || cp -f git/wsl/.gitconfig ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]

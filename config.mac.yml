@@ -37,6 +37,14 @@
         path: python/idlerc/darwin
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
+    ~/.gitconfig:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: git/config/darwin.config
+    ~/.gitignore:
+        force: true
+        if: '[ `uname` = Darwin ]'
+        path: git/.gitignore
     ~/.zshrc:
         force: true
         relink: true
@@ -55,8 +63,6 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.gitconfig    || cp -f git/mac/.gitconfig ~/ ]
-    - [ test -f ~/.gitignore    || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/mac/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]

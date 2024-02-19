@@ -21,6 +21,12 @@
     ~/.ssh/config:
         force: true
         path: ssh/devcontainer/config
+    ~/.gitconfig:
+        force: true
+        path: git/config/linux.config
+    ~/.gitignore:
+        force: true
+        path: git/.gitignore
     ~/.zshrc:
         force: true
         path: zsh/rc/devcontainer.zsh
@@ -30,5 +36,4 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.gitconfig || cp -f git/linux/.gitconfig ~/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
