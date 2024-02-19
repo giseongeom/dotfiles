@@ -6,7 +6,6 @@
 - clean: ['~']
 
 - create:
-    - ~/.aws
     - ~/.kube
     - ~/.local
     - ~/.config/fastfetch

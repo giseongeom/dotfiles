@@ -1,5 +1,18 @@
 # zshrc_local.zsh
 
+# aws-cli autocompletion
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+if [ -x "$(command -v aws_completer)" ]; then
+    complete -C "$(command -v aws_completer)" aws
+fi
+
+# google-cloud-sdk
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
 # kubectl autocompletion
 if [[ -x "$(command -v kubectl)" ]]; then source <(kubectl completion zsh); fi
 
@@ -26,7 +39,6 @@ fi
 if [[ -x "$(command -v eksctl)" ]]; then
     eksctl completion zsh > $ZSH_CACHE_DIR/completions/_eksctl
 fi
-
 
 # fastfetch
 if [[ -x "$(command -v fastfetch)" ]] && [[ $TERM_PROGRAM != "vscode" ]];

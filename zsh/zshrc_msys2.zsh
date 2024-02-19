@@ -83,20 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # set PATH so it includes user's private bin directories
 PATH="$PATH:/c/Users/giseong.eom/bin:/c/Users/giseong.eom/scoop/shims:/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
-# golang
-if [ -d "/usr/local/go/bin" ] ; then
-    PATH="$PATH:/usr/local/go/bin"
-fi
-
-if [ -d "$HOME/go/bin" ] ; then
-    PATH="$HOME/go/bin:$PATH"
-fi
-
-# npm
-if [ -d "$HOME/.npm-global/bin" ] ; then
-    PATH="$HOME/.npm-global/bin:$PATH"
-fi
-
 # $HOME/.local/bin
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -107,11 +93,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# /usr/local/java/bin
-if [ -d "/usr/local/java/bin" ] ; then
-    PATH="$PATH:/usr/local/java/bin"
-    export JAVA_HOME="/usr/local/java"
-fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -144,20 +125,6 @@ if [[ $plugins == *kube-ps1* ]]; then
     PROMPT=$PROMPT'$(kube_ps1) '
     kubeoff
 fi
-
-# aws-cli autocompletion
-# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
-if [ -x "$(command -v aws_completer)" ]; then
-    complete -C "$(command -v aws_completer)" aws
-fi
-
-# google-cloud-sdk
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
 
 # dotfile and so on
 if [ -f ~/.zshrc_local.zsh ]; then
