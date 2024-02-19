@@ -51,7 +51,7 @@
 [credential "https://github.com"]
     username = giseongeom
 
-[oh-my-zsh]
-    hide-status = 1
-    hide-dirty  = 1
+#[oh-my-zsh]
+#    hide-status = 1
+#    hide-dirty  = 1
 
