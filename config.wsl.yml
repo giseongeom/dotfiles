@@ -47,7 +47,6 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
-    - [ test -f ~/.zshrc_local.zsh || cp -f zsh/zshrc_local/wsl.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.gitignore || cp -f git/.gitignore ~/ ]
     - [ test -f ~/.gitconfig || cp -f git/wsl/.gitconfig ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
