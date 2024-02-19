@@ -145,6 +145,13 @@ if [[ $plugins == *kube-ps1* ]]; then
     kubeoff
 fi
 
+# aws-cli autocompletion
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+if [ -x "$(command -v aws_completer)" ]; then
+    complete -C "$(command -v aws_completer)" aws
+fi
+
+
 # dotfile and so on
 if [ -f ~/.zshrc_local.zsh ]; then
     source ~/.zshrc_local.zsh

@@ -22,4 +22,5 @@ then
 fi
 
 # zsh
+autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
