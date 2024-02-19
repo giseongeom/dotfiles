@@ -55,9 +55,9 @@ export MSYS=winsymlinks:nativestrict
 # Install oh-my-zsh
 # https://gist.github.com/fworks/af4c896c9de47d827d4caa6fd7154b6b
 
-# Launch Zsh
-if [ -x /usr/bin/zsh ]; then
-  if [ -t 1 ]; then
-    exec zsh
-  fi
-fi
+# Launch Zsh when Git Bash starts
+# if [ -x /usr/bin/zsh ]; then
+#   if [ -t 1 ]; then
+#     exec zsh
+#   fi
+# fi
