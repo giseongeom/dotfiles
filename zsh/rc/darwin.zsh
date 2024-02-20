@@ -185,3 +185,9 @@ if [[ -x "$(command -v brew)" ]] && [[ -f "$(brew --prefix)/etc/bash_completion.
     source $(brew --prefix)/etc/bash_completion.d/az
 fi
 
+# Perforce / $P4CONFIG
+if [[ -f ${HOME}/.p4config ]];
+then
+    export P4CONFIG=${HOME}/.p4config
+fi
+
