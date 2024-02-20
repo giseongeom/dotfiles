@@ -6,17 +6,28 @@
 - clean: ['~']
 
 - create:
-    - ~/.1password
-    - ~/.ansible
-    - ~/.aws
-    - ~/.config/lsd
-    - ~/.config/gh
-    - ~/.config/glab-cli
-    - ~/.config/fastfetch
-    - ~/.kube
-    - ~/.local
-    - ~/.ssh
-    - ~/.terraform.d
+    ~/.1password:
+        mode: 0700
+    ~/.ansible:
+        mode: 0700
+    ~/.aws:
+        mode: 0700
+    ~/.config/lsd:
+        mode: 0700
+    ~/.config/gh:
+        mode: 0700
+    ~/.config/glab-cli:
+        mode: 0700
+    ~/.config/fastfetch:
+        mode: 0700
+    ~/.kube:
+        mode: 0700
+    ~/.local:
+        mode: 0700
+    ~/.ssh:
+        mode: 0700
+    ~/.terraform.d:
+        mode: 0700
 
 - link:
     ~/.agent-bridge.sh:
