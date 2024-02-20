@@ -13,17 +13,6 @@
         },
         {
           "background": "#003543",
-          "foreground": "#fff",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "windows": "\uf179"
-          },
-          "style": "powerline",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
-          "type": "os"
-        },
-        {
-          "background": "#003543",
           "foreground": "#d2ff5e",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",

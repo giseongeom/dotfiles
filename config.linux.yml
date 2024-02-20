@@ -18,6 +18,8 @@
         mode: 0700
     ~/.config/fastfetch:
         mode: 0700
+    ~/.config/powershell:
+        mode: 0700
     ~/.kube:
         mode: 0700
     ~/.local:
@@ -36,6 +38,9 @@
         force: true
         if: '[ `uname` = Linux ]'
         path: fastfetch/wsl_config.conf
+    ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
+        force: true
+        path: pwsh/profile/Microsoft.PowerShell_profile.ps1
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.gitconfig:
@@ -61,6 +66,7 @@
 
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
+    - [ test -f ~/.config/powershell/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/.config/powershell/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]
