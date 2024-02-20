@@ -35,7 +35,6 @@
     ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
         force: true
         path: pwsh/profile/Microsoft.PowerShell_profile.ps1
-    ~/.ssh/config:
     ~/.gvimrc: vim/gvimrc
     ~/.idlerc:
         force: true
