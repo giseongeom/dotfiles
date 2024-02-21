@@ -110,9 +110,18 @@ alias pbcopy="clip.exe"
 alias k="kubectl"
 
 
+# fastfetch
+if [[ -x "$(command -v fastfetch)" ]] \
+    && [[ "$PWD" == "/c/Users/giseong.eom" ]] \
+    && [[ -n "$WT_SESSION" ]] \
+    && [[ -z "$LENS_SESSION" ]] \
+    && [[ -z "$IDEA_JDK" ]] \
+    && [[ -z "$TERM_PROGRAM" ]];
+then
+    fastfetch -l CBL-Mariner
+fi
+
 
 # zsh
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
-
-
