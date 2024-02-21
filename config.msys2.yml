@@ -6,7 +6,6 @@
 - clean: ['~']
 
 - create:
-    - ~/.kube
     - ~/.local
     - ~/.config/fastfetch
     - ~/.ssh
