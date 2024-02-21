@@ -38,11 +38,20 @@
         create: true
         force: true
         path: lsd/windows_config.yaml
+    ~/.zshrc:
+        force: true
+        path: zsh/rc/git-bash.zsh
+    ~/.bashrc:
+        force: true
+        path: bash/rc/git-bash.sh
+    ~/.bash_profile:
+        force: true
+        path: bash/profile/git-bash.sh
+
 
 - shell:
     - [ test -f ~/.wslconfig    || cp -f wsl/.wslconfig ~/ ]
-    - [ test -f ~/.bashrc       || cp -f bash/git_bash/.bashrc ~/ ]
-    - [ test -f ~/.bash_profile || cp -f bash/git_bash/.bash_profile ~/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/win/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
-    - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]
+    - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json       || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]
+    - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]

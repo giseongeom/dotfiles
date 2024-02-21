@@ -182,7 +182,6 @@ if [ -f '/etc/bash_completion.d/azure-cli' ]; then
     source '/etc/bash_completion.d/azure-cli'
 fi
 
-
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # openssh ssh-agent
