@@ -122,6 +122,9 @@ then
 fi
 
 
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_SAVE_NO_DUPS
 
 # zsh
 autoload bashcompinit && bashcompinit
