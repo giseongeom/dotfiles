@@ -13,6 +13,7 @@
     - ~/.kube
     - ~/.local
     - ~/.config/fastfetch
+    - ~/.config/git
     - ~/.ssh
 
 - link:
@@ -25,6 +26,9 @@
     ~/.config/fastfetch/config.conf:
         force: true
         path: fastfetch/windows_config.conf
+    ~/.config/git/git-prompt.sh:
+        force: true
+        path: bash/git-prompt.sh
     ~/.idlerc: python/idlerc
     ~/.irbrc: ruby/irbrc
     ~/.minttyrc:
