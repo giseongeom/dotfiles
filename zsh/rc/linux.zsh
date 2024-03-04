@@ -204,7 +204,7 @@ if [ -d "$HOME/.krew}/bin" ] ; then
 fi
 
 # fastfetch
-if [[ -x "$(command -v fastfetch)" ]] && [[ -z "$GOLAND_JDK" ]] && [[ -z "$XDG_CURRENT_DESKTOP" ]];
+if [[ -x "$(command -v fastfetch)" ]] && [[ -z "$GOLAND_JDK" ]] && [[ -z "$XDG_CURRENT_DESKTOP" ]] && [[ -z "$TERM_PROGRAM" ]];
 then
     fastfetch
 fi
