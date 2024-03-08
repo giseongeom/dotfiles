@@ -189,5 +189,6 @@ fi
 if [[ -f ${HOME}/.p4config ]];
 then
     export P4CONFIG=${HOME}/.p4config
+    export EDITOR=vim
 fi
 
