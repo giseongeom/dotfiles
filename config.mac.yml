@@ -42,13 +42,8 @@
         path: python/idlerc/darwin
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
-    ~/.gitconfig:
-        force: true
-        if: '[ `uname` = Darwin ]'
-        path: git/config/darwin.config
     ~/.gitignore:
         force: true
-        if: '[ `uname` = Darwin ]'
         path: git/.gitignore
     ~/.zshrc:
         force: true
@@ -72,3 +67,5 @@
     - [ test -f ~/.ssh/config   || cp -f ssh/mac/config ~/.ssh/ ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]
+    - [ test -f ~/.gitconfig    || cp -f git/config/darwin.config ~/.gitconfig ]
+
