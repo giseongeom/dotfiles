@@ -6,14 +6,14 @@
 - clean: ['~']
 
 - create:
-    - ~/.aws
     - ~/AppData/Roaming/lsd
     - ~/AppData/Roaming/terraform.d
     - ~/Documents/oh-my-posh
-    - ~/.kube
-    - ~/.local
+    - ~/.aws
     - ~/.config/fastfetch
-    - ~/.config/git
+    - ~/.kube
+    - ~/.local/bin
+    - ~/.oh-my-zsh/cache/completions
     - ~/.ssh
 
 - link:
@@ -26,9 +26,6 @@
     ~/.config/fastfetch/config.conf:
         force: true
         path: fastfetch/windows_config.conf
-    ~/.config/git/git-prompt.sh:
-        force: true
-        path: bash/git-prompt.sh
     ~/.idlerc: python/idlerc
     ~/.irbrc: ruby/irbrc
     ~/.minttyrc:
@@ -45,9 +42,6 @@
     ~/.zshrc:
         force: true
         path: zsh/rc/git-bash.zsh
-    ~/.zlogout:
-        force: true
-        path: zsh/zlogout/git-bash.zsh
     ~/.bashrc:
         force: true
         path: bash/rc/git-bash.sh
@@ -62,3 +56,8 @@
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json       || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
+    - [ test -f ~/.oh-my-zsh/cache/completions/_kubectx             || cp -f zsh/completion/_kubectx ~/.oh-my-zsh/cache/completions ]
+    - [ test -f ~/.oh-my-zsh/cache/completions/_kubens              || cp -f zsh/completion/_kubens  ~/.oh-my-zsh/cache/completions ]
+    - [ test -f ~/.local/bin/kubectx                                || cp -f kubectx/kubectx ~/.local/bin && chmod 755 ~/.local/bin/kubectx ]
+    - [ test -f ~/.local/bin/kubens                                 || cp -f kubectx/kubens  ~/.local/bin && chmod 755 ~/.local/bin/kubens  ]
+
