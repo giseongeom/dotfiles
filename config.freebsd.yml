@@ -1,0 +1,56 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- clean: ['~']
+
+- create:
+    ~/.ansible:
+        mode: 0700
+    ~/.aws:
+        mode: 0700
+    ~/.config/lsd:
+        mode: 0700
+    ~/.config/gh:
+        mode: 0700
+    ~/.config/glab-cli:
+        mode: 0700
+    ~/.config/fastfetch:
+        mode: 0700
+    ~/.config/powershell:
+        mode: 0700
+    ~/.kube:
+        mode: 0700
+    ~/.local:
+        mode: 0700
+    ~/.ssh:
+        mode: 0700
+    ~/.terraform.d:
+        mode: 0700
+
+- link:
+    ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
+        force: true
+        path: pwsh/profile/Microsoft.PowerShell_profile.ps1
+    ~/.vim: vim/vimfiles
+    ~/.vimrc: vim/vimrc
+    ~/.gitconfig:
+        force: true
+        if: '[ `uname` = FreeBSD ]'
+        path: git/config/freebsd.config
+    ~/.gitignore:
+        force: true
+        path: git/.gitignore
+    ~/.zshrc:
+        force: true
+        if: '[ `uname` = FreeBSD ]'
+        path: zsh/rc/freebsd.zsh
+
+- shell:
+    - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
+    - [ test -f ~/.config/powershell/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/.config/powershell/ ]
+    - [ test -f ~/.ssh/config       || cp -f ssh/config/freebsd.cfg ~/.ssh/config ]
+    - [ test -f ~/.ssh/config       && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/.zshrc_local.zsh  || cp -f zsh/local/freebsd.zsh ~/.zshrc_local.zsh ]
+    - [ test -f ~/.zshrc_local.zsh  && chmod 644 ~/.zshrc_local.zsh ]
