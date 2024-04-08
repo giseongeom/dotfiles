@@ -33,7 +33,7 @@
         path: pwsh/profile/Microsoft.PowerShell_profile.ps1
     ~/.ssh/config:
         force: true
-        path: ssh/devcontainer/config
+        path: ssh/config/devcontainer.cfg
     ~/.zshrc:
         force: true
         path: zsh/rc/devcontainer.zsh

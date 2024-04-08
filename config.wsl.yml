@@ -72,5 +72,5 @@
 - shell:
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.config/powershell/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/.config/powershell/ ]
-    - [ test -f ~/.ssh/config   || cp -f ssh/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config   || cp -f ssh/config/linux.cfg ~/.ssh/config ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
