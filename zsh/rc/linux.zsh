@@ -167,6 +167,8 @@ if [ -f '/usr/local/bin/aws_completer' ]; then
 fi
 
 # google-cloud-sdk
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
@@ -177,19 +179,6 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 # https://stackoverflow.com/questions/49273395/how-to-enable-command-completion-for-azure-cli-in-zsh
 if [ -f '/etc/bash_completion.d/azure-cli' ]; then
     source '/etc/bash_completion.d/azure-cli'
-fi
-
-# zshrc_local.zsh
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-# openssh ssh-agent
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    eval `ssh-agent -s`  >/dev/null 2>&1
-    ssh-add >/dev/null 2>&1
-    KEY_FILES_NUM=$(ls -al ~/.ssh | grep -i .pem | wc -l)
-    if [[ $KEY_FILES_NUM -ge 1 ]]; then
-        ssh-add ~/.ssh/*.pem >/dev/null 2>&1
-    fi
 fi
 
 # nodejs
@@ -207,4 +196,17 @@ fi
 if [[ -x "$(command -v fastfetch)" ]] && [[ -z "$GOLAND_JDK" ]] && [[ -z "$XDG_CURRENT_DESKTOP" ]] && [[ -z "$TERM_PROGRAM" ]];
 then
     fastfetch
+fi
+
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_SAVE_NO_DUPS
+
+# zsh
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+# .zshrc_local.zsh
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
 fi

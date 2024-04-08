@@ -131,6 +131,8 @@ if [[ $plugins == *kube-ps1* ]]; then
 fi
 
 # google-cloud-sdk
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
@@ -142,9 +144,6 @@ if [ -f ~/usr/local/bin/aws ]; then
     autoload -Uz compinit && compinit
     complete -C '/usr/local/bin/aws_completer' aws
 fi
-
-
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # 1password ssh-agent
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
@@ -192,3 +191,15 @@ then
     export EDITOR=vim
 fi
 
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_SAVE_NO_DUPS
+
+# zsh
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+# .zshrc_local.zsh
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
+fi

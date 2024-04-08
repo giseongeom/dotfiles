@@ -130,3 +130,7 @@ setopt HIST_SAVE_NO_DUPS
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
+# .zshrc_local.zsh
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
+fi
