@@ -68,4 +68,5 @@
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
     - [ test -f ~/.hushlogin    || cp -f bash/.hushlogin ~/ ]
     - [ test -f ~/.gitconfig    || cp -f git/config/darwin.config ~/.gitconfig ]
-
+    - [ test -f ~/.zshrc_local.zsh  || cp -f zsh/local/darwin.zsh ~/.zshrc_local.zsh ]
+    - [ test -f ~/.zshrc_local.zsh  && chmod 644 ~/.zshrc_local.zsh ]

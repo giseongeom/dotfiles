@@ -145,16 +145,6 @@ if [ -f ~/usr/local/bin/aws ]; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
 
-# 1password ssh-agent
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-
-# ssh-agent
-#if [ -z "$SSH_AUTH_SOCK" ]; then
-#    eval `ssh-agent -s`  >/dev/null 2>&1
-#    ssh-add >/dev/null 2>&1
-#    ssh-add ~/.ssh/id_rsa_*pem >/dev/null 2>&1
-#fi
-
 # sublime-text 4 / Mac
 #
 # HOWTO: Key repeat issues
@@ -182,13 +172,6 @@ fi
 if [[ -x "$(command -v brew)" ]] && [[ -f "$(brew --prefix)/etc/bash_completion.d/az" ]]; then
     autoload bashcompinit && bashcompinit
     source $(brew --prefix)/etc/bash_completion.d/az
-fi
-
-# Perforce / $P4CONFIG
-if [[ -f ${HOME}/.p4config ]];
-then
-    export P4CONFIG=${HOME}/.p4config
-    export EDITOR=vim
 fi
 
 setopt SHARE_HISTORY
