@@ -74,3 +74,5 @@
     - [ test -f ~/.config/powershell/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/.config/powershell/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config/linux.cfg ~/.ssh/config ]
     - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/.zshenv       || cp -f zsh/env/linux.env.zsh ~/.zshenv ]
+    - [ test -f ~/.zshenv       && chmod 644 ~/.zshenv ]

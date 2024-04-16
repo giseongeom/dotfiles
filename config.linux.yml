@@ -72,3 +72,5 @@
     - [ test -f ~/.hushlogin        || cp -f bash/.hushlogin ~/ ]
     - [ test -f ~/.zshrc_local.zsh  || cp -f zsh/local/linux.zsh ~/.zshrc_local.zsh ]
     - [ test -f ~/.zshrc_local.zsh  && chmod 644 ~/.zshrc_local.zsh ]
+    - [ test -f ~/.zshenv           || cp -f zsh/env/linux.env.zsh ~/.zshenv ]
+    - [ test -f ~/.zshenv           && chmod 644 ~/.zshenv ]
