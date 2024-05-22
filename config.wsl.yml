@@ -39,10 +39,6 @@
         force: true
         if: '[ `uname` = Linux ]'
         path: lsd/linux_config.yaml
-    ~/.config/fastfetch/config.conf:
-        force: true
-        if: '[ `uname` = Linux ]'
-        path: fastfetch/wsl_config.conf
     ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
         force: true
         path: pwsh/profile/Microsoft.PowerShell_profile.ps1

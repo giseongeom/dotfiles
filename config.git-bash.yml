@@ -23,9 +23,6 @@
     ~/.gitignore:
         force: true
         path: git/.gitignore
-    ~/.config/fastfetch/config.conf:
-        force: true
-        path: fastfetch/windows_config.conf
     ~/.idlerc: python/idlerc
     ~/.irbrc: ruby/irbrc
     ~/.minttyrc:
