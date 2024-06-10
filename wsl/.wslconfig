@@ -1,4 +1,5 @@
 [wsl2]
+guiApplications=false
 swap=0
 memory=24GB
 processors=10
