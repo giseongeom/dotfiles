@@ -62,6 +62,8 @@
         path: lsd/mac_config.yaml
 
 - shell:
+    - [ test -f ~/.zshrc        || cp -f zsh/rc/darwin.zsh ~/.zshrc ]
+    - [ test -f ~/.zshrc        || chmod 644 ~/.zshrc ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.config/powershell/iterm3.custom.omp.json || cp -f oh-my-posh/iterm3.custom.omp.json ~/.config/powershell/ ]
     - [ test -f ~/.ssh/config   || cp -f ssh/config/darwin.cfg ~/.ssh/config ]
