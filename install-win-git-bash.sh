@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-DEFAULT_CONFIG="config.git-bash.yml"
+DEFAULT_CONFIG="config.win-git-bash.yml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
