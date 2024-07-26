@@ -48,9 +48,9 @@
 
 
 - shell:
-    - [ test -f ~/.wslconfig    || cp -f wsl/.wslconfig ~/ ]
-    - [ test -f ~/.ssh/config   || cp -f ssh/config/git_bash.cfg ~/.ssh/config ]
-    - [ test -f ~/.ssh/config   && chmod 600 ~/.ssh/config ]
+    - [ test -f ~/.wslconfig          || cp -f wsl/.wslconfig ~/ ]
+    - [ test -f ~/.ssh/config         || cp -f ssh/config/git_bash/config ~/.ssh/ ]
+    - [ test -f ~/.ssh/config         && chmod 600 ~/.ssh/config ]
     - [ test -f ~/Documents/oh-my-posh/iterm3.custom.omp.json       || cp -f oh-my-posh/iterm3.custom.omp.json ~/Documents/oh-my-posh/ ]
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.oh-my-zsh/cache/completions/_kubectx             || cp -f zsh/completion/_kubectx ~/.oh-my-zsh/cache/completions ]
