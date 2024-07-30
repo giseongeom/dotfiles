@@ -253,3 +253,8 @@ then
     fi
 fi
 
+# .zshrc_local.zsh
+if [ -f ~/.zshrc_local.zsh ]; then
+    source ~/.zshrc_local.zsh
+fi
+
