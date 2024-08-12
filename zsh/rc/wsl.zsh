@@ -218,9 +218,9 @@ fi
 
 
 # 1password ssh-agent
-if [ -f "$HOME/.agent-bridge.sh" ]; then
-    source $HOME/.agent-bridge.sh
-fi
+#if [ -f "$HOME/.agent-bridge.sh" ]; then
+#    source $HOME/.agent-bridge.sh
+#fi
 
 # openssh ssh-agent
 if [ -f "$HOME/.openssh-agent-bridge.sh" ]; then
