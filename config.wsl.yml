@@ -36,6 +36,10 @@
         force: true
         if: '[ `hostname` != "CPC-giseo-0SE1T" ] && [ `hostname` != "CPC-xyz-sth" ]'
         path: 1password/.agent-bridge.sh
+    ~/.openssh-agent-bridge.sh:
+        force: true
+        if: '[ `hostname` = "CPC-giseo-0SE1T" ]'
+        path: ssh/.agent-bridge.sh
     ~/.config/lsd/config.yaml:
         force: true
         if: '[ `uname` = Linux ]'

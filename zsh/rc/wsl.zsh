@@ -127,22 +127,27 @@ umask 022
 # set PATH so it includes user's private bin directories
 PATH="/snap/bin:$PATH:/mnt/c/Users/giseong.eom/bin:/mnt/c/Windows:/mnt/c/Windows/System32:/mnt/c/Users/giseong.eom/AppData/Local/Programs/Microsoft VS Code/bin"
 
+# Add (Updated) OpenSSH path
+if [ -d "/mnt/c/Program Files/OpenSSH" ]; then
+    PATH="$PATH:/mnt/c/Program Files/OpenSSH"
+fi
+
 # golang
-if [ -d "/usr/local/go/bin" ] ; then
+if [ -d "/usr/local/go/bin" ]; then
     PATH="$PATH:/usr/local/go/bin"
 fi
 
-if [ -d "$HOME/go/bin" ] ; then
+if [ -d "$HOME/go/bin" ]; then
     PATH="$HOME/go/bin:$PATH"
 fi
 
 # npm
-if [ -d "$HOME/.npm-global/bin" ] ; then
+if [ -d "$HOME/.npm-global/bin" ]; then
     PATH="$HOME/.npm-global/bin:$PATH"
 fi
 
 # $HOME/.local/bin
-if [ -d "$HOME/.local/bin" ] ; then
+if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
@@ -217,6 +222,10 @@ if [ -f "$HOME/.agent-bridge.sh" ]; then
     source $HOME/.agent-bridge.sh
 fi
 
+# openssh ssh-agent
+if [ -f "$HOME/.openssh-agent-bridge.sh" ]; then
+    source $HOME/.openssh-agent-bridge.sh
+fi
 
 # krew
 if [ -d "$HOME/.krew/bin" ] ; then
