@@ -34,6 +34,7 @@
 - link:
     ~/.agent-bridge.sh:
         force: true
+        if: '[ `hostname` != "CPC-giseo-0SE1T" ] && [ `hostname` != "CPC-xyz-sth" ]'
         path: 1password/.agent-bridge.sh
     ~/.config/lsd/config.yaml:
         force: true
