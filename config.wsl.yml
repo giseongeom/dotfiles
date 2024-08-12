@@ -32,17 +32,16 @@
         mode: 0700
 
 - link:
-    ~/.agent-bridge.sh:
-        force: true
-        if: '[ `hostname` != "CPC-giseo-0SE1T" ] && [ `hostname` != "CPC-xyz-sth" ]'
-        path: 1password/.agent-bridge.sh
+  # 1password SSH Agent support
+  # ~/.agent-bridge.sh:
+  #     force: true
+  #     if: '[ `hostname` != "CPC-giseo-0SE1T" ]'
+  #     path: 1password/.agent-bridge.sh
     ~/.openssh-agent-bridge.sh:
         force: true
-        if: '[ `hostname` = "CPC-giseo-0SE1T" ]'
         path: ssh/.agent-bridge.sh
     ~/.config/lsd/config.yaml:
         force: true
-        if: '[ `uname` = Linux ]'
         path: lsd/linux_config.yaml
     ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
         force: true
@@ -51,23 +50,18 @@
     ~/.vimrc: vim/vimrc
     ~/.gitconfig:
         force: true
-        if: '[ `uname` = Linux ]'
         path: git/config/wsl.config
     ~/.gitignore:
         force: true
-        if: '[ `uname` = Linux ]'
         path: git/.gitignore
     ~/.zshrc:
         force: true
-        if: '[ `uname` = Linux ]'
         path: zsh/rc/wsl.zsh
     ~/.zprofile:
         force: true
-        if: '[ `uname` = Linux ]'
         path: zsh/zprofile/wsl.zsh
     ~/.zlogout:
         force: true
-        if: '[ `uname` = Linux ]'
         path: zsh/zlogout/wsl.zsh
 
 - shell:
