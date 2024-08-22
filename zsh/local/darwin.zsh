@@ -1,9 +1,11 @@
-# openssh ssh-agent or 1password ssh-agent
-enable_openssh_ssh_agent=false
-enable_1pwd_ssh_agent=false
+# krew
+if [[ -d ${HOME}/.krew/bin ]];
+then
+    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+fi
 
 # openssh ssh-agent
-if [[ "$enable_openssh_ssh_agent" = 'true' ]]; then
+if [[ -n "$SSH_CLIENT" ]]; then
   if [[ -z "$SSH_AUTH_SOCK" ]]; then
       eval `ssh-agent -s`  >/dev/null 2>&1
       ssh-add >/dev/null 2>&1
@@ -16,7 +18,7 @@ if [[ "$enable_openssh_ssh_agent" = 'true' ]]; then
 fi
 
 # 1password ssh-agent
-if [[ "$enable_1pwd_ssh_agent" = 'true' ]]; then
+if [[ -z "$SSH_CLIENT" ]]; then
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 fi
 
@@ -28,9 +30,9 @@ then
     export EDITOR=vim
 fi
 
-# krew
-if [[ -d ${HOME}/.krew/bin ]];
-then
-    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# fastfetch (SSH connection)
+if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$SSH_CLIENT" ]]; then
+    fastfetch
 fi
+
 

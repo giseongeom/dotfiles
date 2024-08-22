@@ -11,7 +11,9 @@ fi
 
 # fastfetch
 if [[ -x /opt/homebrew/bin/fastfetch ]] \
-    && [[ "$TERM_PROGRAM" != "Lens" ]];
+    && [[ "$TERM_PROGRAM" != "Lens" ]] \
+    && [[ -z "$SSH_CLIENT" ]];
 then
     /opt/homebrew/bin/fastfetch
 fi
+
