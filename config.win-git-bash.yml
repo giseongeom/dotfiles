@@ -11,6 +11,7 @@
     - ~/Documents/oh-my-posh
     - ~/.aws
     - ~/.config/fastfetch
+    - ~/.config/git
     - ~/.kube
     - ~/.local/bin
     - ~/.oh-my-zsh/cache/completions
@@ -53,6 +54,7 @@
     - [ test -f ~/.oh-my-zsh/custom/themes/agnoster2clock.zsh-theme || cp -f zsh/theme/agnoster2clock.zsh-theme ~/.oh-my-zsh/custom/themes ]
     - [ test -f ~/.oh-my-zsh/cache/completions/_kubectx             || cp -f zsh/completion/_kubectx ~/.oh-my-zsh/cache/completions ]
     - [ test -f ~/.oh-my-zsh/cache/completions/_kubens              || cp -f zsh/completion/_kubens  ~/.oh-my-zsh/cache/completions ]
+    - [ test -f ~/.config/git/git-prompt.sh                         || cp -f zsh/git-bash/git-prompt.sh ~/.config/git && chmod 644 ~/.config/git/git-prompt.sh ]
     - [ test -f ~/.local/bin/kubectx                                || cp -f kubectx/kubectx ~/.local/bin && chmod 755 ~/.local/bin/kubectx ]
     - [ test -f ~/.local/bin/kubens                                 || cp -f kubectx/kubens  ~/.local/bin && chmod 755 ~/.local/bin/kubens  ]
 
