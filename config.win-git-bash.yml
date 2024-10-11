@@ -57,4 +57,5 @@
     - [ test -f ~/.config/git/git-prompt.sh                         || cp -f zsh/git-bash/git-prompt.sh ~/.config/git && chmod 644 ~/.config/git/git-prompt.sh ]
     - [ test -f ~/.local/bin/kubectx                                || cp -f kubectx/kubectx ~/.local/bin && chmod 755 ~/.local/bin/kubectx ]
     - [ test -f ~/.local/bin/kubens                                 || cp -f kubectx/kubens  ~/.local/bin && chmod 755 ~/.local/bin/kubens  ]
+    - [ test -f ~/.zshrc_local.zsh                                  || cp -f zsh/local/win-git-bash/.zshrc_local.zsh ~/ && chmod 644 ~/.zshrc_local.zsh ]
 
