@@ -8,7 +8,6 @@ if [ -d "$HOME/go/bin" ]; then
 fi
 
 
-
 # /usr/local/java/bin
 if [ -d "/usr/local/java/bin" ] ; then
     PATH="$PATH:/usr/local/java/bin"
@@ -21,6 +20,10 @@ if [ -f '/usr/local/bin/aws_completer' ]; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
 
+# For Azure VM
+# AWS CLI configuration
+export AWS_EC2_METADATA_DISABLED=true
+export AWS_PAGER=''
 
 # google-cloud-sdk
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
