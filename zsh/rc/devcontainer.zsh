@@ -194,3 +194,7 @@ if [[ -x "$(command -v terraform)" ]]; then
     complete -o nospace -C $(command -v terraform) terraform
 fi
 
+# krew
+if [ -d "$HOME/.krew/bin" ] ; then
+    PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+fi
