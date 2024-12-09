@@ -6,3 +6,10 @@ test -f ~/.bashrc && . ~/.bashrc
 if [[ -x /c/Users/giseong.eom/scoop/shims/fastfetch ]] && [[ -z "$TERM_PROGRAM" ]]; then
 	fastfetch -l android
 fi
+
+# Run inside LENS
+if [[ -d /c/Users/giseong.eom/scoop/shims ]] && [[ "$TERM_PROGRAM" = "Lens" ]]; then
+	PATH="$PATH:/c/Users/giseong.eom/scoop/shims"
+
+    alias k='kubectl'
+fi
