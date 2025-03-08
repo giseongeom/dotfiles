@@ -26,6 +26,9 @@
         mode: 0700
 
 - link:
+    ~/.terraformrc:
+        force: true
+        path: terraform/terraformrc
     ~/.vim: vim/vimfiles
     ~/.vimrc: vim/vimrc
     ~/.config/powershell/Microsoft.PowerShell_profile.ps1:
