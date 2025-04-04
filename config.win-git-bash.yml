@@ -15,6 +15,7 @@
     - ~/.kube
     - ~/.local/bin
     - ~/.oh-my-zsh/cache/completions
+    - ~/.oh-my-zsh/custom/themes
     - ~/.ssh
 
 - link:
