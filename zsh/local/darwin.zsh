@@ -22,7 +22,6 @@ if [[ -z "$SSH_CLIENT" ]]; then
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 fi
 
-
 # Perforce / $P4CONFIG
 if [[ -f ${HOME}/.p4config ]];
 then
@@ -35,4 +34,35 @@ if [[ -x "$(command -v fastfetch)" ]] && [[ -n "$SSH_CLIENT" ]]; then
     fastfetch
 fi
 
+# golang
+if [ -d "/usr/local/go/bin" ]; then
+    PATH="$PATH:/usr/local/go/bin"
+fi
 
+if [ -d "$HOME/go/bin" ]; then
+    PATH="$HOME/go/bin:$PATH"
+fi
+
+# sublime-text 4 / Mac
+# HOWTO: Key repeat issues
+# https://forum.sublimetext.com/t/st4-mac-key-repeat-issues/58152/4
+# defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false
+#
+# Add subl/smerge PATH
+# echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"' >> ~/.zprofile
+# export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+#
+# Make subl/smerge link
+# ln -sf "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
+# ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+# VScode: Key repeat issue
+# https://github.com/VSCodeVim/Vim#mac
+# defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# krew
+# export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# awscli
+# https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-pagination.html#cli-usage-pagination-awspager
+# export AWS_PAGER=''
