@@ -60,6 +60,9 @@ fi
 # https://github.com/VSCodeVim/Vim#mac
 # defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# Disable ApplePressAndHoldEnabled (globally)
+# defaults write -g ApplePressAndHoldEnabled -bool false
+
 # krew
 # export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
