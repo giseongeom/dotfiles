@@ -43,10 +43,11 @@ set t_vb=
 
    elseif has("gui_macvim")
       "set guifont=D2Coding:h16
-      set guifont=D2Coding_ligature:h16
+      set guifont=D2Coding_ligature:h14
 
       syntax on
-      colorscheme solarized8
+      "colorscheme solarized8
+      colorscheme sublimemonokai
    endif
 endif
 
