@@ -43,6 +43,13 @@ if [ -d "$HOME/go/bin" ]; then
     PATH="$HOME/go/bin:$PATH"
 fi
 
+# nodejs
+# Current
+if [ -d "/usr/local/lib/nodejs/current/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/current/bin"; fi
+# LTS
+if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
+
+
 # sublime-text 4 / Mac
 # HOWTO: Key repeat issues
 # https://forum.sublimetext.com/t/st4-mac-key-repeat-issues/58152/4
