@@ -70,6 +70,10 @@ if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodej
 # Disable ApplePressAndHoldEnabled (globally)
 # defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Show hidden files in Finder always
+# https://apple.stackexchange.com/questions/302954/permanently-enable-to-show-hidden-system-files-when-searching-in-finder
+# defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder;
+
 # krew
 # export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
