@@ -69,43 +69,13 @@ function MyDiff()
 endfunction
 
 
-if has('gui_running')
 
-   if has("gui_gtk2")
-      set guifont=NanumGothicCoding\ 12
-
-   elseif has("gui_win32")
-
-	  " Windows specific
-          source $VIMRUNTIME/mswin.vim
-          behave mswin
-	  set noundofile
-
-          " English message
-          lang mes en
-
-          " Set font
-          "set guifont=NanumGothicCoding:h12:b:cDEFAULT
-          set guifont=D2Coding:h12:b:cDEFAULT
-          "set guifontwide=NanumGothicCoding:h10:cDEFAULT
-          "set guifont=Bitstream_Vera_Sans_Mono:h10:b:cANSI
-          "set guifontwide=NanumGothicCoding:h10:b:cDEFAULT
-          "set guifontwide=GulimChe:h10:b:cDEFAULT
-          syntax on
-          colorscheme solarized8
-   endif
-endif
-
-
-
-" Linux
+" *nix
 if has('unix')
     syntax on
     let g:solarized_termcolors=256
     "colorschme silently!
     silent! colorscheme solarized
     set background=dark
-
-    if has('gui_running')
-    endif
 endif
+
