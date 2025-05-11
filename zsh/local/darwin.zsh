@@ -45,9 +45,11 @@ fi
 
 # nodejs
 # Current
-if [ -d "/usr/local/lib/nodejs/current/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/current/bin"; fi
+if [ -d "/usr/local/lib/nodejs/current/bin" ];   then PATH="$PATH:/usr/local/lib/nodejs/current/bin"; fi
+if [ -d "$HOME/.local/lib/nodejs/current/bin" ]; then PATH="$PATH:$HOME/.local/lib/nodejs/current/bin"; fi
 # LTS
-if [ -d "/usr/local/lib/nodejs/lts/bin" ]; then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
+if [ -d "/usr/local/lib/nodejs/lts/bin" ];   then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
+if [ -d "$HOME/.local/lib/nodejs/lts/bin" ]; then PATH="$PATH:$HOME/.local/lib/nodejs/lts/bin"; fi
 
 
 # sublime-text 4 / Mac
