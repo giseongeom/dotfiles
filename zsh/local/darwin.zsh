@@ -47,10 +47,21 @@ fi
 # Current
 if [ -d "/usr/local/lib/nodejs/current/bin" ];   then PATH="$PATH:/usr/local/lib/nodejs/current/bin"; fi
 if [ -d "$HOME/.local/lib/nodejs/current/bin" ]; then PATH="$PATH:$HOME/.local/lib/nodejs/current/bin"; fi
+
 # LTS
 if [ -d "/usr/local/lib/nodejs/lts/bin" ];   then PATH="$PATH:/usr/local/lib/nodejs/lts/bin"; fi
 if [ -d "$HOME/.local/lib/nodejs/lts/bin" ]; then PATH="$PATH:$HOME/.local/lib/nodejs/lts/bin"; fi
 
+# npm
+if [ -d "$HOME/.npm-global/bin" ]; then
+    PATH="$HOME/.npm-global/bin:$PATH"
+fi
+
+# Scala
+# >>> coursier install directory >>>
+if [ -d "$HOME/Library/Application Support/Coursier/bin" ]; then
+    PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
+fi
 
 # sublime-text 4 / Mac
 # HOWTO: Key repeat issues
