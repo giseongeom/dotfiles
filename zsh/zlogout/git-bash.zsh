@@ -1,9 +1,7 @@
 # zlogout
 
-# $HOME/.zsh_history.*
-if [[ -f $HOME/.zsh_history ]]; then
-    zsh_histfile_num=$(ls -al ~/.zsh_history* 2> /dev/null | wc -l)
-    if [[ $zsh_histfile_num -ne 1 ]]; then
-        rm -f $HOME/.zsh_history.*
-    fi
+# ssh-agent
+if [ -n "$SSH_AGENT_PID" ] ; then
+    eval `ssh-agent -k`  >/dev/null 2>&1
 fi
+

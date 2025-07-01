@@ -39,6 +39,9 @@
     ~/.zshrc:
         force: true
         path: zsh/rc/git-bash.zsh
+    ~/.zlogout:
+        force: true
+        path: zsh/zlogout/git-bash.zsh
     ~/.bashrc:
         force: true
         path: bash/rc/git-bash.sh
